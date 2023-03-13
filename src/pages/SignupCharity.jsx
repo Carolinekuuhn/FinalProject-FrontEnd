@@ -27,7 +27,7 @@ function SignupCharity() {
     try {
       const response = await axios.post(
         `${import.meta.env.VITE_API_URL}/auth/signupcharity`,
-        { name, email, password }
+        { name, email, password, description }
       );
       console.log(response.data);
 
@@ -78,7 +78,7 @@ function SignupCharity() {
           value={number}
           onChange={handleNumber}
         /> */}
-       
+
         <div className="col-md-3">
           <label htmlFor="urgencyNumber" className="urgencyNumber">
             Number of Urgency
@@ -96,7 +96,6 @@ function SignupCharity() {
             <option value="Not Urgent">1</option>
             <option value="A bit Urgent">2</option>
             <option value="Urgent">3</option>
-            
           </select>
         </div>
         <br />
@@ -109,12 +108,16 @@ function SignupCharity() {
           value={description}
           onChange={handleDescription}
         />
-  
-   <label htmlfor="urlLink">Website Link:</label>
-  <input type="text" id="urlLink" name="urlLink" value={urlLink} onChange={handleUrlLink} placeholder="Enter website link here"/>
-  
 
-
+        <label htmlFor="urlLink">Website Link:</label>
+        <input
+          type="text"
+          id="urlLink"
+          name="urlLink"
+          value={urlLink}
+          onChange={handleUrlLink}
+          placeholder="Enter website link here"
+        />
 
         <br></br>
         <br></br>
@@ -139,7 +142,7 @@ function SignupCharity() {
             value={typeofCharity}
             onChange={handleTypeofCharity}
             className="form-select is-invalid"
-            id="validationServer04"
+            id="validationServer05"
             aria-describedby="validationServer04Feedback"
             required
           >
