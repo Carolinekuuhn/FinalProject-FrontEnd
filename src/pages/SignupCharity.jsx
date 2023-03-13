@@ -8,7 +8,7 @@ function SignupCharity() {
   const [password, setPassword] = useState("");
   const [typeofCharity, setTypeofCharity] = useState("");
   const [image, setImage] = useState("");
-  const [number, setNumber] = useState("");
+  const [urgencyNumber, setUrgencyNumber] = useState("");
   const [description, setDescritpion] = useState("");
   const [urlLink, setUrlLink] = useState("");
 
@@ -17,7 +17,7 @@ function SignupCharity() {
   const handlePassword = (e) => setPassword(e.target.value);
   const handleTypeofCharity = (e) => setTypeofCharity(e.target.value);
   const handleImage = (e) => setImage(e.target.value);
-  const handleNumber = (e) => setNumber(e.target.value);
+  const handleUrgencyNumber = (e) => setUrgencyNumber(e.target.value);
   const handleDescription = (e) => setDescritpion(e.target.value);
   const handleUrlLink = (e) => setUrlLink(e.target.value);
 
@@ -70,15 +70,37 @@ function SignupCharity() {
           onChange={handlePassword}
         />
 
-        <label htmlFor="UrgencyNumber">Urgency</label>
+        {/* <label htmlFor="UrgencyNumber">Urgency</label>
         <input
           type="number"
           name="number"
           id="number"
           value={number}
           onChange={handleNumber}
-        />
-
+        /> */}
+       
+        <div className="col-md-3">
+          <label htmlFor="urgencyNumber" className="urgencyNumber">
+            Number of Urgency
+          </label>
+          <select
+            name="urgencyNumber"
+            value={urgencyNumber}
+            onChange={handleUrgencyNumber}
+            className="form-select is-invalid"
+            id="validationServer04"
+            aria-describedby="validationServer04Feedback"
+            required
+          >
+            <option value="">Choose...</option>
+            <option value="Not Urgent">1</option>
+            <option value="A bit Urgent">2</option>
+            <option value="Urgent">3</option>
+            
+          </select>
+        </div>
+        <br />
+        <br />
         <label htmlFor="description">Description</label>
         <input
           type="text"
@@ -87,35 +109,52 @@ function SignupCharity() {
           value={description}
           onChange={handleDescription}
         />
+  
+   <label htmlfor="urlLink">Website Link:</label>
+  <input type="text" id="urlLink" name="urlLink" value={urlLink} onChange={handleUrlLink} placeholder="Enter website link here"/>
+  
 
-        {/*
-        <div className="dropdown">
-          <button
-            className="btn btn-secondary dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
+
+
+        <br></br>
+        <br></br>
+        <div className="mb-3">
+          <input
+            type="file"
+            name="image"
+            value={image}
+            onChange={handleImage}
+            className="form-control"
+            aria-label="file example"
+            required
+          />
+        </div>
+
+        <div className="col-md-3">
+          <label htmlFor="typeofCharity" className="typeofCharity">
+            Type of Charity:
+          </label>
+          <select
+            name="typeofCharity"
+            value={typeofCharity}
+            onChange={handleTypeofCharity}
+            className="form-select is-invalid"
+            id="validationServer04"
+            aria-describedby="validationServer04Feedback"
+            required
           >
-            Type of Charity
-          </button>
-          <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a className="dropdown-item" href="#">
-              Animals
-            </a>
-            <a className="dropdown-item" href="#">
-              Homeless People
-            </a>
-            <a className="dropdown-item" href="#">
-              Families & Children
-            </a>
-            <a className="dropdown-item" href="#">
-              Enviroment
-            </a>
-          </div>
-        </div> */}
+            <option value="">Choose...</option>
+            <option value="Animals">Animals</option>
+            <option value="Domestic Violence">Domestic Violence</option>
+            <option value="Homeless">Homeless</option>
+            <option value="Enviroment">Enviroment</option>
+          </select>
+        </div>
 
+        <br />
+        <br />
+        <br />
+        <br />
         <button type="submit">Create account</button>
       </form>
 
