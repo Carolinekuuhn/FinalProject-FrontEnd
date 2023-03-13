@@ -16,7 +16,7 @@ function SignupCharity() {
   const handleEmail = (e) => setEmail(e.target.value);
   const handlePassword = (e) => setPassword(e.target.value);
   const handleTypeofCharity = (e) => setTypeofCharity(e.target.value);
-  const handleImage = (e) => setImage(e.target.value);
+
   const handleUrgencyNumber = (e) => setUrgencyNumber(e.target.value);
   const handleDescription = (e) => setDescritpion(e.target.value);
   const handleUrlLink = (e) => setUrlLink(e.target.value);
@@ -24,10 +24,23 @@ function SignupCharity() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+  
+
+
+
     try {
       const response = await axios.post(
         `${import.meta.env.VITE_API_URL}/auth/signupcharity`,
-        { name, email, password, description }
+        {
+          email,
+          name,
+          password,
+          typeofCharity,
+          urgencyNumber,
+          image,
+          description,
+          urlLink,
+        }
       );
       console.log(response.data);
 
@@ -36,6 +49,21 @@ function SignupCharity() {
       console.log(error);
     }
   };
+  
+  const handleFileUpload = async (e) => {
+    // console.log("The file to be uploaded is: ", e.target.files[0]);
+ 
+    const uploadData = new FormData();
+ 
+    // imageUrl => this name has to be the same as in the model since we pass
+    // req.body to .create() method when creating a new movie in '/api/movies' POST route
+    uploadData.append("image", e.target.files[0]);
+    try {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/upload`, uploadData);
+      setImage(response.data.fileUrl);
+    } catch (error) {
+      console.log("Error while uploading the file: ", error);
+    }};
 
   const navigate = useNavigate();
 
@@ -125,8 +153,8 @@ function SignupCharity() {
           <input
             type="file"
             name="image"
-            value={image}
-            onChange={handleImage}
+           
+            onChange={handleFileUpload}
             className="form-control"
             aria-label="file example"
             required

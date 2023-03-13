@@ -1,58 +1,46 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
+import charityService from "../services/charity.service";
 
-function ProjectDetails() {
-  const [charity, setCharity] = useState(null);
+function CharityGroups() {
+  const [charities, setCharities] = useState([]);
+  const [animalCharities, setAnimalCharities] = useState([]);
 
-  const { id } = useParams();
-
-  const getCharity = async () => {
+  const getCharities = async () => {
     try {
-      const response = await axios.get(
-        `${import.meta.env.VITE_API_URL}/api/charities/${id}`
-      );
-
+      const response = await charityService.getAllCharities();
       console.log(response.data);
-      setProject(response.data);
+      setCharities(response.data);
     } catch (error) {
       console.log(error);
     }
   };
 
-  // it is a function we need to call with ()
-  // to load as soon as we get the component
   useEffect(() => {
-    getCharity();
+    getCharities();
   }, []);
+
+  const filterAnimalCharities = () => {
+    const filteredCharities = charities.filter(
+      (charity) => charity.typeofCharity === "animals"
+    );
+    setAnimalCharities(filteredCharities);
+  };
 
   return (
     <div>
-      {charity && (
-        <>
-          <h1>{charity.name}</h1>
-          <p>{charity.description}</p>
-        </>
-      )}
-
-     {/*{project &&
-        project.tasks.map((task) => {
-          return (
-            <div key={task._id}>
-              <h3>{task.title}</h3>
-              <p>{task.description}</p>
-            </div>
-          );
-        })}
-
-      {project && (
-        <Link to={`/projects/edit/${project._id}`}> Edit project</Link>
-      )} 
-      
-      */}
-
+      <h1>All Charities</h1>
+      <button onClick={filterAnimalCharities}>Animals</button>
+      <ul>
+        {animalCharities.length > 0
+          ? animalCharities.map((charity) => (
+              <li key={charity._id}>{charity.name}</li>
+            ))
+          : charities.map((charity) => <li key={charity._id}>{charity.name}</li>)}
+      </ul>
     </div>
   );
 }
 
-export default ProjectDetails;
+export default CharityGroups;
