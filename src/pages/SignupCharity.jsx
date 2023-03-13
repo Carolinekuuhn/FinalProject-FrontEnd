@@ -178,7 +178,7 @@ function SignupCharity() {
             <option value="Animals">Animals</option>
             <option value="Domestic Violence">Domestic Violence</option>
             <option value="Homeless">Homeless</option>
-            <option value="Enviroment">Enviroment</option>
+            <option value="Environment">Environment</option>
           </select>
         </div>
 
