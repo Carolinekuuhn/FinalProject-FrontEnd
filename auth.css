@@ -1,0 +1,103 @@
+
+
+@media only screen and (min-width: 576px) and (max-width: 1199.98px) {
+    .masthead {
+      padding: 5em 0;
+    }
+    .masthead-intro {
+      font-size: 3em;
+    }
+    .masthead-heading {
+      font-size: 0.5em;
+    }
+    .about {
+      padding: 0 3em;
+    }
+    .footer-about {
+      padding: 0 3em;
+      color: #ffffff;
+    }
+
+    .Card {
+        display: wrap;
+    }
+  }
+/* Footer Styling */
+
+footer {
+  background-color: #f1f3f5;
+  padding: 40px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+footer h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+}
+.footer-about > p {
+  color: #333;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.footer-about {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+footer li {
+  margin-right: 30px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+}
+
+footer i {
+  margin-right: 10px;
+  color: #333;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.content-footer {
+  padding: 2em 0;
+  margin-top: 3em;
+  background: #f1f3f5;
+}
+/* card home page */
+
+.Card-section{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70vh;
+    margin: 3vh 5vh;
+    
+}
+
+/*  */ 
+
+
+body{
+    background-color: #f1f3f5;
+}
+
+.header{
+    opacity: 50%;
+}
