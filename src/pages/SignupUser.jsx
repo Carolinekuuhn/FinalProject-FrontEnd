@@ -29,41 +29,53 @@ function SignupUser() {
   const navigate = useNavigate();
 
   return (
-    <section>
-      <h1>Signup</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name</label>
+    <section className="signupFrm">
+    <form onSubmit={handleSubmit} className="form">
+      <h2 className="title">Signup Volunteer</h2>
+      
+
+      <div className="inputContainer">
+        <label htmlFor="name" className="label">Name</label>
         <input
           type="text"
           name="name"
           id="name"
           value={name}
           onChange={handleName}
+          className="input"
         />
+        </div>
 
-        <label htmlFor="email">Email</label>
+        <div className="inputContainer">
+        <label htmlFor="email" className="label">Email</label>
         <input
           type="email"
           name="email"
           id="email"
           value={email}
           onChange={handleEmail}
+          className="input"
         />
+        </div>
 
-        <label htmlFor="password">Password</label>
+<div className="inputContainer">
+        <label htmlFor="password" className="label">Password</label>
         <input
           type="password"
           name="password"
           id="password"
           value={password}
           onChange={handlePassword}
+          className="input"
         />
+        </div>
 
-        <button type="submit">Create account</button>
-      </form>
+        <button type="submit" className="submitBtn">Create account</button>
+      
 
       <p>Already have an account?</p>
-      <Link to="/login">Login</Link>
+      <Link to="/login" className="nav-link">Login</Link>
+      </form>
     </section>
   );
 }

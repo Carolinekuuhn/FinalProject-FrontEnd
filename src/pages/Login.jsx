@@ -35,34 +35,47 @@ function Login() {
   const navigate = useNavigate();
 
   return (
-    <section>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email</label>
+    
+    <section className="signupFrm">
+    <form onSubmit={handleSubmit} className="form">
+    <h1 className="title">Login</h1>
+      
+
+      <div className="inputContainer">
+        <label htmlFor="email" className="label">Email</label>
         <input
           type="email"
           name="email"
           id="email"
           value={email}
           onChange={handleEmail}
+          className="input"
         />
+        </div>
 
-        <label htmlFor="password">Password</label>
+        <div className="inputContainer">
+        <label htmlFor="password" className="label">Password</label>
         <input
           type="password"
           name="password"
           id="password"
           value={password}
           onChange={handlePassword}
+          className="input"
         />
+        </div>
 
-        <button type="submit">Login</button>
-      </form>
+        <button type="submit" className="submitBtn">Login</button>
+      
 
       <p>Don't have an account?</p>
-      <Link to="/signup">Signup</Link>
+      <Link to="/signup" className="nav-link">Signup</Link>
+      </form>
     </section>
+    
   );
 }
 
 export default Login;
+
+
