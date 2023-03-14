@@ -6,6 +6,7 @@ import SignupUser from "./pages/SignupUser";
 import Login from "./pages/Login";
 import SignupCharity from "./pages/SignupCharity";
 import CharityGroup from "./pages/CharityGroups";
+import CharityDetails from "./pages/CharityDetails";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/signupcharity" element={<SignupCharity />} />
         <Route path="/login" element={<Login />} />
         <Route path="/charities" element={<CharityGroup/>} />
+        <Route path="/charities/:id" element={<CharityDetails/>} />
 
       </Routes>
     </div>

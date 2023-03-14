@@ -35,8 +35,12 @@ function CharityGroups() {
   return (
     <div>
       <h1>All Charities</h1>
+      <br></br>
+      <br></br>
       <h2>Need help Urgently</h2>
-      <button onClick={() => filterCharities("3")}>Very Urgent</button>
+      <button onClick={() => filterCharities("very urgent")}>Very Urgent</button>
+      <br></br>
+      <br></br>
       <h2>Charities by group</h2>
       <button onClick={() => filterCharities("Animals")}>Animals</button>
       <button onClick={() => filterCharities("Homeless")}>Homeless</button>
@@ -49,6 +53,7 @@ function CharityGroups() {
 
       <div>
         {filteredCharities.map((charity) => (
+          
           <div key={charity._id}>
             <h3>{charity.name}</h3>
             <p>{charity.description}</p>

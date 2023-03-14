@@ -1,5 +1,3 @@
-import React from "react";
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
@@ -16,7 +14,7 @@ function CharityDetails() {
       );
 
       console.log(response.data);
-      setProject(response.data);
+      setCharity(response.data);
     } catch (error) {
       console.log(error);
     }
@@ -33,11 +31,12 @@ function CharityDetails() {
       {charity && (
         <>
           <h1>{charity.name}</h1>
-          <p>{charity.description}</p>
+          <p>{charity.urlLink}</p>
+          <img src={charity.image} alt="CharityLogo" />
         </>
       )}
 
-     {/*{project &&
+      {/*{project &&
         project.tasks.map((task) => {
           return (
             <div key={task._id}>
@@ -52,7 +51,6 @@ function CharityDetails() {
       )} 
       
       */}
-
     </div>
   );
 }
