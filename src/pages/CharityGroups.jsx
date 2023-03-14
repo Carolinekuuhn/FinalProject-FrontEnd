@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import charityService from "../services/charity.service";
 import { Card } from "react-bootstrap";
 import { Button } from "react-bootstrap";
-import '../../charityG.css';
+import "./charityG.css";
 
 function CharityGroups() {
   const [charities, setCharities] = useState([]);
@@ -23,7 +23,6 @@ function CharityGroups() {
 
   useEffect(() => {
     getCharities();
-   
   }, []);
 
   const filterCharities = (type) => {
@@ -38,18 +37,18 @@ function CharityGroups() {
       (charity) => charity.urgencyNumber === "Urgent"
     );
     setFilteredCharity(filteredCharity);
-  
-    
   };
 
   useEffect(() => {
     filterCharity();
   }, [charities]);
-  
-  {/*const showAllCharities = () => {
+
+  {
+    /*const showAllCharities = () => {
     setFilteredCharities([]);
     setFilteredCharity([]);
-  };*/}
+  };*/
+  }
 
   return (
     <div>
@@ -57,27 +56,54 @@ function CharityGroups() {
       <br></br>
       <br></br>
       <h2>Need help Urgently</h2>
-      {filteredCharity.map((charityOne) => (
-        <div key={charityOne._id}>
-          <Card className="card1" style={{ width: "18rem" }}>
-            <Card.Img variant="top" src={charityOne.image} alt="CharityLogo" />
-            <Card.Body>
-              <Card.Title>{charityOne.name}</Card.Title>
-              <Card.Text>{charityOne.description}</Card.Text>
-              <Link to={`/charities/${charityOne._id}`}>
-                <Button variant="outline-dark">See More Information</Button>
-              </Link>
-            </Card.Body>
-          </Card>
+      <div className="card-container-area">
+        <div className="card-container">
+          {filteredCharity.map((charityOne) => (
+            <div key={charityOne._id} className="card-container-area">
+              <Card className="card1" style={{ width: "18rem" }}>
+                <Card.Img
+                  variant="top"
+                  src={charityOne.image}
+                  alt="CharityLogo"
+                />
+                <Card.Body>
+                  <Card.Title>{charityOne.name}</Card.Title>
+                  <Card.Text>{charityOne.description}</Card.Text>
+                  <Link to={`/charities/${charityOne._id}`}>
+                    <Button variant="outline-dark">See More Information</Button>
+                  </Link>
+                </Card.Body>
+              </Card>
+            </div>
+          ))}
         </div>
-      ))}
-      <br></br>
+      </div>
       <h2>Charities by group</h2>
-      <button onClick={() => filterCharities("Animals")}>Animals</button>
-      <button onClick={() => filterCharities("Homeless")}>Homeless</button>
-      <button onClick={() => filterCharities("Environment")}>Environment</button>
-      <button onClick={() => filterCharities("Domestic Violence")}>Domestic Violence</button>
+      <br></br>
+      <br></br>
+      <div className="button-container">
+        <button className="button1" onClick={() => filterCharities("Animals")}>
+          Animals
+        </button>
+        <button className="button1" onClick={() => filterCharities("Homeless")}>
+          Homeless
+        </button>
+        <button
+          className="button1"
+          onClick={() => filterCharities("Environment")}
+        >
+          Environment
+        </button>
+        <button
+          className="button1"
+          onClick={() => filterCharities("Domestic Violence")}
+        >
+          Domestic Violence
+        </button>
+      </div>{" "}
       <div>
+        <br></br>
+        <br></br>
         {filteredCharities.map((charity) => (
           <div key={charity._id}>
             <Card style={{ width: "18rem" }}>
@@ -94,9 +120,7 @@ function CharityGroups() {
         ))}
       </div>
     </div>
-  );  
-  
+  );
 }
 
 export default CharityGroups;
-  
