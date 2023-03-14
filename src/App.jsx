@@ -8,6 +8,7 @@ import SignupCharity from "./pages/SignupCharity";
 import CharityGroup from "./pages/CharityGroups";
 import CharityDetails from "./pages/CharityDetails";
 import EditCharity from "./pages/EditCharity";
+import CreateReview from "./components/CreateReview";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/charities" element={<CharityGroup />} />
         <Route path="/charities/:id" element={<CharityDetails />} />
         <Route path="/profile" element={<EditCharity />} />
+        <Route path="/reviews" element={<CreateReview />} />
       </Routes>
     </div>
   );
