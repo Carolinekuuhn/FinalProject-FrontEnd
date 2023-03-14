@@ -34,7 +34,7 @@ function EditCharity() {
       await axios.delete(
         `${import.meta.env.VITE_API_URL}/api/charity/${user._id}`
       );
-      navigate("/charity");
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
@@ -73,7 +73,7 @@ function EditCharity() {
         `${import.meta.env.VITE_API_URL}/api/charity/${user._id}`,
         body
       );
-      navigate(`/charity/${user._id}`);
+      navigate(`/profile`);
     } catch (error) {
       console.log(error);
     }
@@ -97,7 +97,7 @@ function EditCharity() {
           />
         </div>
 
-        <div className="inputContainer">
+        {/*<div className="inputContainer">
           <div className="col-md-3">
             <label htmlFor="urgencyNumber" className="urgencyNumber" id="label">
               Urgency
@@ -119,7 +119,7 @@ function EditCharity() {
               <option value="Urgent">3</option>
             </select>
           </div>
-        </div>
+        </div>*/}
 
         <div className="inputContainer">
           <label htmlFor="description" className="label">
@@ -135,7 +135,7 @@ function EditCharity() {
           />
         </div>
 
-        <div className="inputContainer">
+        {/*<div className="inputContainer">
           <div className="mb-3">
             <input
               type="file"
@@ -146,7 +146,7 @@ function EditCharity() {
               required
             />
           </div>
-        </div>
+        </div>*/}
 
         <button type="submit" className="submitBtn">
           Edit Profile
