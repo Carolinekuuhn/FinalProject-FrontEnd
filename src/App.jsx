@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import SignupCharity from "./pages/SignupCharity";
 import CharityGroup from "./pages/CharityGroups";
 import CharityDetails from "./pages/CharityDetails";
+import EditCharity from "./pages/EditCharity";
 
 function App() {
   return (
@@ -18,9 +19,9 @@ function App() {
         <Route path="/signup" element={<SignupUser />} />
         <Route path="/signupcharity" element={<SignupCharity />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/charities" element={<CharityGroup/>} />
-        <Route path="/charities/:id" element={<CharityDetails/>} />
-
+        <Route path="/charities" element={<CharityGroup />} />
+        <Route path="/charities/:id" element={<CharityDetails />} />
+        <Route path="/profile" element={<EditCharity />} />
       </Routes>
     </div>
   );
