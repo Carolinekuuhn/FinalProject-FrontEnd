@@ -105,7 +105,7 @@ function CharityGroups() {
         <br></br>
         <br></br>
         {filteredCharities.map((charity) => (
-          <div key={charity._id}>
+          <div key={charity._id} className="card-container-area">
             <Card style={{ width: "18rem" }}>
               <Card.Img variant="top" src={charity.image} alt="CharityLogo" />
               <Card.Body>
