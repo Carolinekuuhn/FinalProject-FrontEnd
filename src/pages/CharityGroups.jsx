@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import charityService from "../services/charity.service";
 import { Card } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 function CharityGroups() {
   const [charities, setCharities] = useState([]);
@@ -54,10 +55,12 @@ function CharityGroups() {
           <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src={charityOne.image} alt="CharityLogo" />
             <Card.Body>
-              <Link to={`/charities/${charityOne._id}`}>
-                <Card.Title> {charityOne.name} </Card.Title>
-              </Link>
+              <Card.Title> {charityOne.name} </Card.Title>
+
               <Card.Text>{charityOne.description}</Card.Text>
+              <Link to={`/charities/${charityOne._id}`}>
+                <Button variant="outline-dark">See More Information</Button>
+              </Link>
             </Card.Body>
           </Card>
         </div>
@@ -76,12 +79,16 @@ function CharityGroups() {
       <div>
         {filteredCharities.map((charity) => (
           <div key={charity._id}>
-            <Link to={`/charities/${charity._id}`}>
-              <h3>{charity.name}</h3>
-            </Link>
-            <p>{charity.description}</p>
-            <p>{charity.urlLink}</p>
-            <img src={charity.image} alt="CharityLogo" />
+            <Card style={{ width: "18rem" }}>
+              <Card.Img variant="top" src={charity.image} alt="CharityLogo" />
+              <Card.Body>
+                <Card.Title> {charity.name} </Card.Title>
+                <Card.Text>{charity.description}</Card.Text>
+                <Link to={`/charities/${charity._id}`}>
+                  <Button variant="outline-dark">See More Information</Button>
+                </Link>
+              </Card.Body>
+            </Card>
           </div>
         ))}
       </div>
@@ -113,4 +120,3 @@ function CharityGroups() {
 }
 
 export default CharityGroups;
-  

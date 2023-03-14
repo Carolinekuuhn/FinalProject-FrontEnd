@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import CreateReview from "../components/CreateReview";
+import { Card } from "react-bootstrap";
 
 function CharityDetails() {
   const [charity, setCharity] = useState(null);
@@ -21,8 +22,6 @@ function CharityDetails() {
     }
   };
 
-  // it is a function we need to call with ()
-  // to load as soon as we get the component
   useEffect(() => {
     getCharity();
   }, []);
@@ -31,17 +30,27 @@ function CharityDetails() {
     <div>
       {charity && (
         <>
-          <h1>{charity.name}</h1>
-          <p>{charity.urlLink}</p>
-          <img src={charity.image} alt="CharityLogo" />
-          <CreateReview charityId = {charity._id}/>
-          {charity.reviews.map(review => {
-            return (<p>{review.userComment}</p>)
-          })}
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" src={charity.image} alt="CharityLogo" />
+            <Card.Body>
+              <Card.Title> {charity.name} </Card.Title>
+              <Link
+                to={charity.urlLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {charity.urlLink}
+              </Link>
+              <Card.Text>{charity.description}</Card.Text>
+            </Card.Body>
+
+            <CreateReview charityId={charity._id} />
+            {charity.reviews.map((review) => {
+              return <Card.Text>{review.userComment}</Card.Text>;
+            })}
+          </Card>
         </>
       )}
-
-      
     </div>
   );
 }
