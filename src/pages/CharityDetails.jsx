@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
+import CreateReview from "../components/CreateReview";
 
 function CharityDetails() {
   const [charity, setCharity] = useState(null);
@@ -33,24 +34,14 @@ function CharityDetails() {
           <h1>{charity.name}</h1>
           <p>{charity.urlLink}</p>
           <img src={charity.image} alt="CharityLogo" />
+          <CreateReview charityId = {charity._id}/>
+          {charity.reviews.map(review => {
+            return (<p>{review.userComment}</p>)
+          })}
         </>
       )}
 
-      {/*{project &&
-        project.tasks.map((task) => {
-          return (
-            <div key={task._id}>
-              <h3>{task.title}</h3>
-              <p>{task.description}</p>
-            </div>
-          );
-        })}
-
-      {project && (
-        <Link to={`/projects/edit/${project._id}`}> Edit project</Link>
-      )} 
       
-      */}
     </div>
   );
 }
