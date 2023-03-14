@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom"; // after we edit, we go back to the project list
 import { AuthContext } from "../context/auth.context";
+import CreateReview from "../components/CreateReview";
 
 function EditCharity() {
   const [name, setName] = useState("");
@@ -16,14 +17,17 @@ function EditCharity() {
   const navigate = useNavigate(); // store in variable so now we can use this function   (to redirect)
 
   const { user } = useContext(AuthContext);
-
+  const [charity, setCharity] = useState(null);
+  console.log("lalalal", user);
   const getCharity = async () => {
     try {
       const response = await axios.get(
-        `${import.meta.env.VITE_API_URL}/api/charity/${user._id}`
+        `${import.meta.env.VITE_API_URL}/api/charities/${user._id}`
       ); // we could just copy-paste the url, but problems: by deployment we won't connect to localhost! -> it needs to be a variable  **
       setName(response.data.name);
       setDescription(response.data.description);
+      setCharity(response.data);
+      console.log(user._id);
     } catch (error) {
       console.log(error);
     }
@@ -32,7 +36,7 @@ function EditCharity() {
   const deleteCharity = async () => {
     try {
       await axios.delete(
-        `${import.meta.env.VITE_API_URL}/api/charity/${user._id}`
+        `${import.meta.env.VITE_API_URL}/api/charities/${user._id}`
       );
       navigate("/");
     } catch (error) {
@@ -61,7 +65,7 @@ function EditCharity() {
 
   useEffect(() => {
     getCharity();
-  }, []); // we don't need to write [id] here
+  }, [user]); // we don't need to write [id] here
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -70,7 +74,7 @@ function EditCharity() {
     const body = { name, description };
     try {
       await axios.put(
-        `${import.meta.env.VITE_API_URL}/api/charity/${user._id}`,
+        `${import.meta.env.VITE_API_URL}/api/charities/${user._id}`,
         body
       );
       navigate(`/profile`);
@@ -81,23 +85,20 @@ function EditCharity() {
 
   return (
     <section>
-      <form onSubmit={handleSubmit} className="signupFrm">
+      <form onSubmit={handleSubmit}>
         <h1 className="title"> Edit Profile: </h1>
         <div className="inputContainer">
-          <label htmlFor="name" className="label">
-            Name
-          </label>
+          <label htmlFor="name">Name</label>
           <input
             type="text"
             name="name"
             id="name"
             value={name}
             onChange={handleName}
-            className="input"
           />
         </div>
 
-        {/*<div className="inputContainer">
+        <div className="inputContainer">
           <div className="col-md-3">
             <label htmlFor="urgencyNumber" className="urgencyNumber" id="label">
               Urgency
@@ -119,23 +120,20 @@ function EditCharity() {
               <option value="Urgent">3</option>
             </select>
           </div>
-        </div>*/}
+        </div>
 
-        <div className="inputContainer">
-          <label htmlFor="description" className="label">
-            Description
-          </label>
+        <div>
+          <label htmlFor="description">Description</label>
           <input
             type="text"
             name="description"
             id="description"
             value={description}
             onChange={handleDescription}
-            className="input"
           />
         </div>
 
-        {/*<div className="inputContainer">
+        <div>
           <div className="mb-3">
             <input
               type="file"
@@ -146,16 +144,18 @@ function EditCharity() {
               required
             />
           </div>
-        </div>*/}
+        </div>
 
-        <button type="submit" className="submitBtn">
-          Edit Profile
-        </button>
+        <div>
+          {charity.reviews.map((review) => {
+            return <p>{review.userComment}</p>;
+          })}
+        </div>
+
+        <button type="submit">Edit Profile</button>
       </form>
 
-      <button onClick={deleteCharity} className="submitBtn">
-        Delete Account
-      </button>
+      <button onClick={deleteCharity}>Delete Account</button>
     </section>
   );
 }
