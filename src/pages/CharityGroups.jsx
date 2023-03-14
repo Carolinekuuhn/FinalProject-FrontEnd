@@ -35,6 +35,9 @@ function CharityGroups() {
   return (
     <div>
       <h1>All Charities</h1>
+      <h2>Need help Urgently</h2>
+      <button onClick={() => filterCharities("3")}>Very Urgent</button>
+      <h2>Charities by group</h2>
       <button onClick={() => filterCharities("Animals")}>Animals</button>
       <button onClick={() => filterCharities("Homeless")}>Homeless</button>
       <button onClick={() => filterCharities("Environment")}>
@@ -51,7 +54,6 @@ function CharityGroups() {
             <p>{charity.description}</p>
             <p>{charity.urlLink}</p>
             <img src={charity.image} alt="CharityLogo" />
-            
           </div>
         ))}
       </div>
