@@ -1,52 +1,40 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
+import { AuthContext } from "../context/auth.context";
 
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
 function NavBar() {
+  const { loggedIn, user, logout } = useContext(AuthContext);
   return (
-    <div className="NavBar">
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarTogglerDemo01"
-          aria-controls="navbarTogglerDemo01"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a className="navbar-brand" href="/">
-            Home
-          </a>
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/signup">
-                {" "}
-                Signup Volunteer{" "}
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/signupcharity">
-                {" "}
-                Signup Charity{" "}
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/login">
-                {" "}
-                Login{" "}
-              </a>
-            </li>
-          </ul>
-          <div>Caring Cumminities</div>
-        </div>
-      </div>
-    </nav>
+    <div>
+      <Navbar bg="light" variant="light">
+        <Container>
+          <Navbar.Brand href="/">Home</Navbar.Brand>
+          <Nav className="me-auto">
+            {loggedIn ? (
+              <>
+                <span>
+                  <strong> Hello {user.name} </strong>
+                </span>
+
+                <Nav.Link href="/charities">Charity Groups</Nav.Link>
+                <Nav.Link href="/charities/:id"> Charity Details</Nav.Link>
+                <button onClick={logout}>Logout</button>
+              </>
+            ) : (
+              <>
+                <Nav.Link href="/signupcharity"> Signup Charity</Nav.Link>
+                <Nav.Link href="/signup">Signup Volunteer </Nav.Link>
+                <Nav.Link href="/login"> Login </Nav.Link>
+              </>
+            )}
+          </Nav>
+        </Container>
+      </Navbar>
     </div>
   );
 }

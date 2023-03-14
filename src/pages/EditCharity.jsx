@@ -147,10 +147,10 @@ function EditCharity() {
         </div>
 
         <div>
-          {charity.reviews.map((review) => {
+          {charity && charity.reviews.map((review) => {
             return <p>{review.userComment}</p>;
           })}
-        </div>
+        </div> 
 
         <button type="submit">Edit Profile</button>
       </form>
