@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import CreateReview from "../components/CreateReview";
 import { Card } from "react-bootstrap";
 import { AuthContext } from "../context/auth.context";
+import "./charityG.css";
 
 function CharityDetails() {
   const [charity, setCharity] = useState(null);
@@ -46,10 +47,11 @@ function CharityDetails() {
   };
 
   return (
-    <div>
+    <div className="
+    card3">
       {charity && (
         <>
-          <Card style={{ width: "18rem" }}>
+          <Card style={{ width: "50rem" }}>
             <Card.Img variant="top" src={charity.image} alt="CharityLogo" />
             <Card.Body>
               <Card.Title> {charity.name} </Card.Title>
@@ -62,7 +64,7 @@ function CharityDetails() {
               </Link>
               <Card.Text>{charity.description}</Card.Text>
             </Card.Body>
-
+     
             <CreateReview charityId={charity._id} setUpdated={setUpdated} />
             {charity.reviews.map((review) => {
               return (
@@ -79,7 +81,9 @@ function CharityDetails() {
               );
             })}
           </Card>
+        
         </>
+       
       )}
     </div>
   );
