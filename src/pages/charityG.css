@@ -11,9 +11,10 @@
 }
 
 .card1 {
-  flex: 1;
+
   margin: 10px;
   background-color: #e9f1e0; 
+  height: 650px;
  
 }
 
