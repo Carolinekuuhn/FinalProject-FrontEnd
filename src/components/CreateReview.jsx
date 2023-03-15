@@ -27,8 +27,10 @@ const CreateReview = (props) => {
   };
 
   return (
+  
     <form onSubmit={handleSubmit}>
       <div className="createReview">
+      <div >
         <label htmlFor="rating"> Rating:</label>
         <input
           type="number"
@@ -48,6 +50,7 @@ const CreateReview = (props) => {
       </div>
 
       <button type="submit">Submit</button>
+      </div>
       <br></br>   
       <br></br>
     </form>

@@ -150,10 +150,14 @@ h1 {
     text-align: justify;
   }
   
-
+  .card3 img {
+    height:auto;
+    object-fit: cover;
+  }
   .createReview {
     display: inline-block;
     flex-direction: row;
     justify-content: space-around;
+    background-color: #0069d9;
 
   }

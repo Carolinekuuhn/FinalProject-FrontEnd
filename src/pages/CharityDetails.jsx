@@ -51,7 +51,7 @@ function CharityDetails() {
     card3">
       {charity && (
         <>
-          <Card style={{ width: "50rem" }}>
+          <Card style={{ width: "40rem" }}>
             <Card.Img variant="top" src={charity.image} alt="CharityLogo" />
             <Card.Body>
               <Card.Title> {charity.name} </Card.Title>
