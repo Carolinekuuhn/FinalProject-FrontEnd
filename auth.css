@@ -92,6 +92,13 @@ footer i {
   margin-top: 70vh;
   margin: 3vh 5vh;
 }
+/* p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+  }*/
+  
+
 body {
   background-color: #f1f3f5;
 }
@@ -179,6 +186,7 @@ body {
   cursor: pointer;
   font-size: 16px;
   margin-top: 30px;
+
 }
 
 .submitBtn:hover {
@@ -279,4 +287,19 @@ body {
   border: #b4cfea solid 1px;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+/*signup dropdwons*/
+
+.inputContainer {
+  display: inline-block;
+  flex-direction: row;
+}
+
+@media (max-width: 767px) { /* Adjust this breakpoint as needed */
+  .inputContainer {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px; /* Adjust this value as needed */
+  }
 }
