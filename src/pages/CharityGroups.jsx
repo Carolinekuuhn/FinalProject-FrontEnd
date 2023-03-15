@@ -96,9 +96,9 @@ function CharityGroups() {
         </button>
         <button
           className="button1"
-          onClick={() => filterCharities("Domestic Violence")}
+           onClick={() => filterCharities("Families & Children")}
         >
-          Domestic Violence
+          Families & Children
         </button>
       </div>{" "}
       <div>
@@ -106,7 +106,7 @@ function CharityGroups() {
         <br></br>
         {filteredCharities.map((charity) => (
           <div key={charity._id} className="card-container-area">
-            <Card style={{ width: "18rem" }}>
+            <Card className="card1" style={{ width: "18rem" }}>
               <Card.Img variant="top" src={charity.image} alt="CharityLogo" />
               <Card.Body>
                 <Card.Title> {charity.name} </Card.Title>
