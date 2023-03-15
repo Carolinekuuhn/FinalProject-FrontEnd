@@ -67,6 +67,7 @@ function CharityDetails() {
             {charity.reviews.map((review) => {
               return (
                 <>
+                <Card.Text> {review.userId.name}: {review.userComment}</Card.Text>
                   {user._id === review.userId._id && (
                     <button
                       onClick={() => deleteReview(review._id, charity._id)}
@@ -74,8 +75,6 @@ function CharityDetails() {
                       delete
                     </button>
                   )}
-
-                  <Card.Text>{review.userComment}</Card.Text>
                 </>
               );
             })}
