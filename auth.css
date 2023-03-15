@@ -239,32 +239,44 @@ body {
   justify-content: space-evenly;
 }
 
-/* signup volunteer */
+/* signup volunteer background */
 .page {
   background-image: url("/images/background3.jpg");
   opacity: 80%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
 }
 
-/* signup charity */
+/* signup charity background */
 .page2 {
   background-image: url("/images/pexels-julia-m-cameron-6995015.jpg");
   opacity: 80%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
 }
 
-/* login */
+/* login background */
 .page3 {
   background-image: url("/images/background6.jpg");
   opacity: 80%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
 
+/* home page */
+
+.description {
+  border-radius: 8px;
+  text-align: center;
+  padding: 20px 40px;
+  box-shadow: 0 10px 25px var(--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: #b4cfea solid 1px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
