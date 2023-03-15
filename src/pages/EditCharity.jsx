@@ -84,7 +84,8 @@ function EditCharity() {
   };
 
   return (
-    <section>
+    <section className="profile2">
+    <div className="profile">
       <form onSubmit={handleSubmit}>
         <h1 className="title"> Edit Profile: </h1>
         <div className="inputContainer">
@@ -110,7 +111,7 @@ function EditCharity() {
               className="form-select is-invalid"
               id="validationServer04"
               aria-describedby="validationServer04Feedback"
-              required
+              
             >
               <option value="" className="submitBtn">
                 Choose...
@@ -122,7 +123,7 @@ function EditCharity() {
           </div>
         </div>
 
-        <div>
+        <div className="inputContainer">
           <label htmlFor="description">Description</label>
           <input
             type="text"
@@ -133,7 +134,7 @@ function EditCharity() {
           />
         </div>
 
-        <div>
+        <div className="inputContainer">
           <div className="mb-3">
             <input
               type="file"
@@ -141,22 +142,24 @@ function EditCharity() {
               onChange={handleFileUpload}
               className="form-control"
               aria-label="file example"
-              required
             />
           </div>
-        </div>
+        </div> 
 
-        <div>
+        <button type="submit" className="submitBtn" > Edit Profile </button>
+        <button onClick={deleteCharity} className="submitBtn"> Delete Account </button>
+      </form>
+      </div>
+
+      <div className="reviews">
+      <h1 className="title"> Reviews</h1>
           {charity && charity.reviews.map((review) => {
             return <p>{review.userComment}</p>;
           })}
         </div> 
 
-        <button type="submit">Edit Profile</button>
-      </form>
-
-      <button onClick={deleteCharity}>Delete Account</button>
     </section>
+
   );
 }
 

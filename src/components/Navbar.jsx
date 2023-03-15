@@ -23,6 +23,7 @@ function NavBar() {
 
                 <Nav.Link href="/charities">Charity Groups</Nav.Link>
                 <Nav.Link href="/charities/:id"> Charity Details</Nav.Link>
+                <Nav.Link href="/profile"> Charity Profile </Nav.Link>
                 <button onClick={logout}>Logout</button>
               </>
             ) : (

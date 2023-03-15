@@ -1,27 +1,30 @@
-
-
 @media only screen and (min-width: 576px) and (max-width: 1199.98px) {
-    .masthead {
-      padding: 5em 0;
-    }
-    .masthead-intro {
-      font-size: 3em;
-    }
-    .masthead-heading {
-      font-size: 0.5em;
-    }
-    .about {
-      padding: 0 3em;
-    }
-    .footer-about {
-      padding: 0 3em;
-      color: #ffffff;
-    }
-
-    .Card {
-        display: wrap;
-    }
+  .masthead {
+    padding: 5em 0;
   }
+  .masthead-intro {
+    font-size: 3em;
+  }
+  .masthead-heading {
+    font-size: 0.5em;
+  }
+  .about {
+    padding: 0 3em;
+  }
+  .footer-about {
+    padding: 0 3em;
+    color: #ffffff;
+  }
+
+  .Card {
+    display: wrap;
+  }
+
+  .profile {
+    padding: 0 3em;
+    font-size: 3em;
+  }
+}
 /* Footer Styling */
 
 footer {
@@ -82,16 +85,15 @@ footer i {
 }
 /* card home page */
 
-.Card-section{
-    flex-direction: row;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 70vh;
-    margin: 3vh 5vh;
-    
+.Card-section {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 70vh;
+  margin: 3vh 5vh;
 }
-body{
-    background-color: #f1f3f5;
+body {
+  background-color: #f1f3f5;
 }
 
 /* signup/login */
@@ -103,35 +105,11 @@ body{
   height: 100vh;
   box-sizing: border-box;
   overflow-x: hidden;
-} 
+}
 
-#label{
+#label {
   margin-bottom: -5vh;
 }
-/*
-.signupFrm2{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-  box-sizing: border-box;
-  overflow-x: hidden;
- 
-} */
-/*
-.signupFrm {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background-color: white;
-  font-family: "Red Hat Text", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
-} */
 
 .form {
   background-color: white;
@@ -145,7 +123,7 @@ body{
 .title {
   font-size: 50px;
   margin-bottom: 50px;
-  color: #B4CFEA;
+  color: #b4cfea;
 }
 
 .inputContainer {
@@ -155,14 +133,13 @@ body{
   margin-bottom: 17px;
 }
 
-
 .input {
   position: absolute;
   top: 0px;
   left: 0px;
   height: 100%;
   width: 100%;
-  border: 1px solid #DADCE0;
+  border: 1px solid #dadce0;
   border-radius: 7px;
   font-size: 16px;
   padding: 0 20px;
@@ -185,7 +162,7 @@ body{
   left: 15px;
   padding: 0 4px;
   background-color: white;
-  color: #DADCE0;
+  color: #dadce0;
   font-size: 16px;
   transition: 0.5s;
   z-index: 0;
@@ -196,7 +173,7 @@ body{
   margin-left: auto;
   padding: 15px 30px;
   border: none;
-  background-color: #B4CFEA;
+  background-color: #b4cfea;
   color: white;
   border-radius: 6px;
   cursor: pointer;
@@ -205,7 +182,7 @@ body{
 }
 
 .submitBtn:hover {
-  background-color: #B4CFEA;
+  background-color: #b4cfea;
   transform: translateY(-2px);
 }
 
@@ -215,17 +192,49 @@ body{
   z-index: 10;
   font-size: 14px;
   font-weight: 600;
-  color: #B4CFEA
+  color: #b4cfea;
 }
 
 .input:focus {
-  border: 2px solid #B4CFEA;
+  border: 2px solid #b4cfea;
 }
 
-.input:not(:placeholder-shown)+ .label {
+.input:not(:placeholder-shown) + .label {
   top: -7px;
   left: 3px;
   z-index: 10;
   font-size: 14px;
   font-weight: 600;
+}
+
+/* profile charirty */
+.profile {
+  background-color: white;
+  width: 500px;
+  height: 600px;
+  border-radius: 8px;
+  padding: 20px 40px;
+  box-shadow: 0 10px 25px var(--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews {
+  background-color: white;
+  width: 400px;
+  height: 300px;
+  border-radius: 8px;
+  padding: 20px 40px;
+  box-shadow: 0 10px 25px var(--color);
+  text-align: center;
+}
+.reviews p {
+  border: 1px solid #b4cfea;
+}
+
+.profile2 {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
 }
