@@ -122,29 +122,7 @@ function SignupCharity() {
           value={number}
           onChange={handleNumber}
         /> */}
-        <div className="inputContainer">
-          <div className="col-md-3">
-            <label htmlFor="urgencyNumber" className="urgencyNumber" id="label">
-              Urgency
-            </label>
-            <select
-              name="urgencyNumber"
-              value={urgencyNumber}
-              onChange={handleUrgencyNumber}
-              className="form-select is-invalid"
-              id="validationServer04"
-              aria-describedby="validationServer04Feedback"
-              required
-            >
-              <option value="" className="submitBtn">
-                Choose...
-              </option>
-              <option value="Not Urgent">1</option>
-              <option value="A bit Urgent">2</option>
-              <option value="Urgent">3</option>
-            </select>
-          </div>
-        </div>
+       
 
         <div className="inputContainer">
           <label htmlFor="description" className="label">
@@ -187,7 +165,7 @@ function SignupCharity() {
             />
           </div>
         </div>
-
+  <div className="dropdwons">
         <div className="inputContainer">
           <div className="col-md-3">
             <label htmlFor="typeofCharity" className="typeofCharity">
@@ -204,13 +182,38 @@ function SignupCharity() {
             >
               <option value="">Choose...</option>
               <option value="Animals">Animals</option>
-              <option value="Domestic Violence">Domestic Violence</option>
+              <option value="Families & Children">Families & Children</option>
               <option value="Homeless">Homeless</option>
               <option value="Environment">Environment</option>
             </select>
           </div>
         </div>
-
+        <br></br>
+        <br></br>
+        <div className="inputContainer">
+          <div className="col-md-3">
+            <label htmlFor="urgencyNumber" className="urgencyNumber" id="label">
+              Urgency
+            </label>
+            <select
+              name="urgencyNumber"
+              value={urgencyNumber}
+              onChange={handleUrgencyNumber}
+              className="form-select is-invalid"
+              id="validationServer04"
+              aria-describedby="validationServer04Feedback"
+              required
+            >
+              <option value="" className="submitBtn">
+                Choose...
+              </option>
+              <option value="Not Urgent">1</option>
+              <option value="A bit Urgent">2</option>
+              <option value="Urgent">3</option>
+            </select>
+          </div>
+        </div>
+</div>
         <button type="submit" className="submitBtn">
           Create account
         </button>
