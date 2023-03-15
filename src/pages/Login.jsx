@@ -45,6 +45,7 @@ function Login() {
   };
 
   return (
+    <div className="page3">
     <section className="signupFrm">
       <form onSubmit={handleSubmit} className="form">
         <h1 className="title">Login</h1>
@@ -87,6 +88,7 @@ function Login() {
         </Link>
       </form>
     </section>
+    </div>
   );
 }
 

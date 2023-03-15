@@ -29,6 +29,7 @@ function SignupUser() {
   const navigate = useNavigate();
 
   return (
+    <div className="page">
     <section className="signupFrm">
     <form onSubmit={handleSubmit} className="form">
       <h2 className="title">Signup Volunteer</h2>
@@ -77,6 +78,7 @@ function SignupUser() {
       <Link to="/login" className="nav-link">Login</Link>
       </form>
     </section>
+    </div>
   );
 }
 

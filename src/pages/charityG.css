@@ -1,3 +1,7 @@
+body {
+  background-color: #f1f3f5;
+}
+
 .card-container-area {
   display: inline-block;
   flex-direction: row;

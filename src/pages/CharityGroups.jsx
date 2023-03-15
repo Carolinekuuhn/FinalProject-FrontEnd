@@ -55,9 +55,9 @@ function CharityGroups() {
       <h1>All Charities</h1>
       <br></br>
       <br></br>
-      <h2>Need help Urgently</h2>
+      <h2>URGENT</h2>
       <div className="card-container-area">
-        <div className="card-container">
+      
           {filteredCharity.map((charityOne) => (
             <div key={charityOne._id} className="card-container-area">
               <Card className="card1" style={{ width: "18rem" }}>
@@ -76,7 +76,7 @@ function CharityGroups() {
               </Card>
             </div>
           ))}
-        </div>
+       
       </div>
       <h2>Charities by group</h2>
       <br></br>

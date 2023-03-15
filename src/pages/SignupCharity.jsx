@@ -68,6 +68,7 @@ function SignupCharity() {
   const navigate = useNavigate();
 
   return (
+    <div className="page2">
     <section className="signupFrm">
       <form onSubmit={handleSubmit} className="form">
         <h3 className="title">Signup Charity</h3>
@@ -224,6 +225,7 @@ function SignupCharity() {
         </Link>
       </form>
     </section>
+    </div>
   );
 }
 
