@@ -74,7 +74,7 @@ function EditCharity() {
     const body = { name, description };
     try {
       await axios.put(
-        `${import.meta.env.VITE_API_URL}/api/charities/${user._id}`,
+        `${import.meta.env.VITE_API_URL}/api/charity/${user._id}`,
         body
       );
       navigate(`/profile`);
@@ -85,82 +85,91 @@ function EditCharity() {
 
   return (
     <section className="profile2">
-    <div className="profile">
-      <form onSubmit={handleSubmit}>
-        <h1 className="title"> Edit Profile: </h1>
-        <div className="inputContainer">
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            value={name}
-            onChange={handleName}
-          />
-        </div>
-
-        <div className="inputContainer">
-          <div className="col-md-3">
-            <label htmlFor="urgencyNumber" className="urgencyNumber" id="label">
-              Urgency
-            </label>
-            <select
-              name="urgencyNumber"
-              value={urgencyNumber}
-              onChange={handleUrgencyNumber}
-              className="form-select is-invalid"
-              id="validationServer04"
-              aria-describedby="validationServer04Feedback"
-              
-            >
-              <option value="" className="submitBtn">
-                Choose...
-              </option>
-              <option value="Not Urgent">1</option>
-              <option value="A bit Urgent">2</option>
-              <option value="Urgent">3</option>
-            </select>
-          </div>
-        </div>
-
-        <div className="inputContainer">
-          <label htmlFor="description">Description</label>
-          <input
-            type="text"
-            name="description"
-            id="description"
-            value={description}
-            onChange={handleDescription}
-          />
-        </div>
-
-        <div className="inputContainer">
-          <div className="mb-3">
+      <div className="profile">
+        <form onSubmit={handleSubmit}>
+          <h1 className="title"> Edit Profile: </h1>
+          <div className="inputContainer">
+            <label htmlFor="name">Name</label>
             <input
-              type="file"
-              name="image"
-              onChange={handleFileUpload}
-              className="form-control"
-              aria-label="file example"
+              type="text"
+              name="name"
+              id="name"
+              value={name}
+              onChange={handleName}
             />
           </div>
-        </div> 
 
-        <button type="submit" className="submitBtn" > Edit Profile </button>
-        <button onClick={deleteCharity} className="submitBtn"> Delete Account </button>
-      </form>
+          <div className="inputContainer">
+            <div className="col-md-3">
+              <label
+                htmlFor="urgencyNumber"
+                className="urgencyNumber"
+                id="label"
+              >
+                Urgency
+              </label>
+              <select
+                name="urgencyNumber"
+                value={urgencyNumber}
+                onChange={handleUrgencyNumber}
+                className="form-select is-invalid"
+                id="validationServer04"
+                aria-describedby="validationServer04Feedback"
+              >
+                <option value="" className="submitBtn">
+                  Choose...
+                </option>
+                <option value="Not Urgent">1</option>
+                <option value="A bit Urgent">2</option>
+                <option value="Urgent">3</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="inputContainer">
+            <label htmlFor="description">Description</label>
+            <input
+              type="text"
+              name="description"
+              id="description"
+              value={description}
+              onChange={handleDescription}
+            />
+          </div>
+
+          <div className="inputContainer">
+            <div className="mb-3">
+              <input
+                type="file"
+                name="image"
+                onChange={handleFileUpload}
+                className="form-control"
+                aria-label="file example"
+              />
+            </div>
+          </div>
+
+          <button type="submit" className="submitBtn">
+            {" "}
+            Edit Profile{" "}
+          </button>
+          <button onClick={deleteCharity} className="submitBtn">
+            {" "}
+            Delete Account{" "}
+          </button>
+        </form>
       </div>
 
       <div className="reviews">
-      <h1 className="title"> Reviews</h1>
-          {charity && charity.reviews.map((review) => {
-            return <p>{review.userComment}</p>;
+        <h1 className="title"> Reviews</h1>
+        {charity &&
+          charity.reviews.map((review) => {
+            return <p>{review.userId.name}: {review.userComment}</p>;
           })}
-        </div> 
-
+      </div>
     </section>
-
   );
 }
 
 export default EditCharity;
+

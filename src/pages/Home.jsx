@@ -7,9 +7,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
 function Home() {
-  const { user } = useContext(AuthContext);
 
-  console.log(user);
 
   return (
     <div>

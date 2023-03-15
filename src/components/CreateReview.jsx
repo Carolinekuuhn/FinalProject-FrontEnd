@@ -1,20 +1,25 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState, useContext } from "react";
+import { AuthContext } from "../context/auth.context";
+import axios from "axios";
 
-const CreateReview = ({charityId}) => {
-  const [rating, setRating] = useState('');
-  const [userComment, setUserComment] = useState('');
-  const [userId, setUserId] = useState('0jj');
+const CreateReview = (props) => {
+  const { setUpdated, charityId } = props;
+  const [rating, setRating] = useState("");
+  const [userComment, setUserComment] = useState("");
+  const { user } = useContext(AuthContext);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/reviews`, { rating, userComment, userId: "640b16b650d26c0f37bce5f9", charityId });
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_URL}/api/reviews`,
+        { rating, userComment, userId: user._id, charityId }
+      );
       console.log(response.data);
       // Reset form
-      setRating('');
-      setUserComment('');
-      setUserId('');
+      setRating("");
+      setUserComment("");
+      setUpdated(false);
     } catch (error) {
       console.error(error);
     }
@@ -39,7 +44,7 @@ const CreateReview = ({charityId}) => {
           onChange={(event) => setUserComment(event.target.value)}
         ></textarea>
       </div>
-      
+
       <button type="submit">Submit</button>
     </form>
   );
