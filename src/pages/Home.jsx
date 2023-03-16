@@ -91,7 +91,7 @@ function Home() {
         <div className="textDescription">
           <p>
             <br />
-            Welcome to our charity website, where you can make a difference and
+            Welcome to our Caring Communities website, where you can make a difference and
             help those in need. We offer a variety of charitable options to
             choose from, so you can find the cause that speaks to your heart.
             Our mission is to create a world where everyone has access to basic
@@ -111,7 +111,7 @@ function Home() {
 
       <section className="Card-section">
         <div className="Card">
-          <Card style={{ width: "18rem" }}>
+          <Card className="cardtotal" style={{ width: "18rem" }}>
             <Card.Img variant="top" src="/images/Animal Card.jpg" />
             <Card.Body>
               <Card.Title className="titleCard"> Animals </Card.Title>
@@ -137,7 +137,7 @@ function Home() {
         </div>
 
         <div>
-          <Card style={{ width: "18rem" }}>
+          <Card className="cardtotal" style={{ width: "18rem" }}>
             <Card.Img variant="top" src="/images/ambiente card.jpg" />
             <Card.Body>
               <Card.Title className="titleCard"> Environment </Card.Title>
@@ -163,7 +163,7 @@ function Home() {
         </div>
 
         <div>
-          <Card style={{ width: "18rem" }}>
+          <Card className="cardtotal" style={{ width: "18rem" }}>
             <Card.Img variant="top" src="/images/Idosos card.jpg" />
             <Card.Body>
               <Card.Title className="titleCard"> Homeless </Card.Title>
@@ -189,7 +189,7 @@ function Home() {
         </div>
 
         <div>
-          <Card style={{ width: "18rem" }}>
+          <Card className="cardtotal" style={{ width: "18rem" }}>
             <Card.Img variant="top" src="/images/card.jpg" />
             <Card.Body>
               <Card.Title className="titleCard">Families & Children</Card.Title>
