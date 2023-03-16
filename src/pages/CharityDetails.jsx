@@ -65,23 +65,27 @@ function CharityDetails() {
               <Card.Text>{charity.description}</Card.Text>
             </Card.Body>
      
-            <CreateReview charityId={charity._id} setUpdated={setUpdated} />
+            <CreateReview charityId={charity._id} setUpdated={setUpdated}/>
             {charity.reviews.map((review) => {
               return (
-                <>
-                <Card.Text> {review.userId.name}: {review.userComment}</Card.Text>
+                
+                <div className="reviewsgroup">
+                <Card.Text> {review.userId.name} : {review.userComment}</Card.Text>
                   {user._id === review.userId._id && (
-                    <button
+                    <button className="submitBtnHome"
                       onClick={() => deleteReview(review._id, charity._id)}
                     >
-                      delete
+                      Delete Review
                     </button>
+              
                   )}
-                </>
+              
+                </div>
               );
+            
             })}
           </Card>
-        
+          
         </>
        
       )}

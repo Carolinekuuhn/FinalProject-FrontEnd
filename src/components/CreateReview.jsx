@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { AuthContext } from "../context/auth.context";
 import axios from "axios";
-import "../pages/charityG.css"
+import "../pages/charityG.css";
 
 const CreateReview = (props) => {
   const { setUpdated, charityId } = props;
@@ -27,11 +27,9 @@ const CreateReview = (props) => {
   };
 
   return (
-  
     <form onSubmit={handleSubmit}>
-
       <div className="createReview">
-    {/*  <div >
+        {/*  <div >
         <label htmlFor="rating"> Rating:</label>
         <input
           type="number"
@@ -40,19 +38,24 @@ const CreateReview = (props) => {
           onChange={(event) => setRating(event.target.value)}
         />
       </div>*/}
-      <br></br>
-      <div>
-        <label htmlFor="comment">Comment:</label>
-        <textarea
-          id="comment"
-          value={userComment}
-          onChange={(event) => setUserComment(event.target.value)}
-        ></textarea>
-      </div>
+        <br></br>
+        <div>
+          <label htmlFor="comment">
+            <h5 className="titleHome"> Create a Review :</h5>
+          </label>
+          <br />
+          <textarea
+            id="comment"
+            value={userComment}
+            onChange={(event) => setUserComment(event.target.value)}
+          ></textarea>
+        </div>
 
-      <button type="submit">Submit</button>
+        <button type="submit" className="submitBtnHome">
+          Submit
+        </button>
       </div>
-      <br></br>   
+      <br></br>
       <br></br>
     </form>
   );
