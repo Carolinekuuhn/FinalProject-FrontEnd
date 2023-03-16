@@ -3,6 +3,12 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+#urgentcard {
+  bottom: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
 .card-container-area {
   display: inline-block;
   flex-direction: row;
@@ -10,18 +16,11 @@ body {
   max-width: 100%;
   margin: 0;
   padding: 10px;
-  padding: 10px;
-  
-}
-
-.card-container-area2 {
-  display: inline-block;
-  flex-direction: row;
-  justify-content: space-around;
-
-  max-width: 100%;
-  margin: 0;
-  padding: 10px;
+  position: relative;
+  text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    word-spacing: -0.05em;
 }
 
 .card1 {
@@ -30,22 +29,13 @@ body {
   height: 650px;
   box-shadow: 0 10px 25px var(--color);
   display: flex; /* make the card a flex container */
+  flex-direction: column; /* set a vertical layout */
   justify-content: center; /* horizontally center the content */
   align-items: center; /* vertically center the content */
   text-align: center; /* center the text within the content */
+  border-radius: 2%;
   box-shadow: 0 30px 30px rgba(150, 3, 3, 0.16),
     0 30px 20px rgba(155, 3, 3, 0.23);
-}
-
-.card2 {
-  margin: 10px;
-  background-color: #e9f1e0;
-  height: 650px;
-  box-shadow: 0 10px 25px var(--color);
-  display: flex; /* make the card a flex container */
-  justify-content: center; /* horizontally center the content */
-  align-items: center; /* vertically center the content */
-  text-align: center; /* center the text within the content */
 }
 
 .card1 img {
@@ -55,11 +45,19 @@ body {
 
 .card1 .card-body {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
 }
 
-.card1 h5 {
+.titlecard {
   font-size: 1.2rem;
   margin-top: 1rem;
+  color: #0069d9;
+  margin-bottom: 15px;
 }
 
 .card1 p {
@@ -72,6 +70,36 @@ body {
   margin-top: auto;
 }
 
+
+#urgentcard {
+  bottom: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.card-container-area2 {
+  display: inline-block;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 100%;
+  margin: 0;
+  padding: 10px;
+  position: relative;
+}
+
+.card2 {
+  margin: 10px;
+  background-color: #e9f1e0;
+  height: 650px;
+  box-shadow: 0 10px 25px var(--color);
+  display: flex; /* make the card a flex container */
+  flex-direction: column; /* set a vertical layout */
+  justify-content: center; /* horizontally center the content */
+  align-items: center; /* vertically center the content */
+  text-align: center; /* center the text within the content */
+  
+}
+
 .card2 img {
   height: 200px;
   object-fit: cover;
@@ -79,11 +107,18 @@ body {
 
 .card2 .card-body {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
-.card2 h5 {
+.titlecard {
   font-size: 1.2rem;
   margin-top: 1rem;
+  color: #0069d9;
+  margin-bottom: 20px;
 }
 
 .card2 p {
@@ -121,7 +156,7 @@ h1 {
   border-radius: 0.25rem;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
     border-color 0.2s ease-in-out;
-  background-color: #007bff;
+  background-color: #1a3858;
   color: #fff;
   border: 1px solid #007bff;
   display: flex;
@@ -182,8 +217,7 @@ h1 {
   justify-content: space-around;
 }
 
-
-.css-selector{
+.css-selector {
   background: linear-gradient(30deg, #df0b0b, #f94906, #f5b516);
   background-size: 600% 600%;
 
@@ -192,12 +226,24 @@ h1 {
 }
 
 @-webkit-keyframes AnimationName {
-  0%{background-position:0% 81%}
-  50%{background-position:100% 20%}
-  100%{background-position:0% 81%}
+  0% {
+    background-position: 0% 81%;
+  }
+  50% {
+    background-position: 100% 20%;
+  }
+  100% {
+    background-position: 0% 81%;
+  }
 }
 @keyframes AnimationName {
-  0%{background-position:0% 81%}
-  50%{background-position:100% 20%}
-  100%{background-position:0% 81%}
+  0% {
+    background-position: 0% 81%;
+  }
+  50% {
+    background-position: 100% 20%;
+  }
+  100% {
+    background-position: 0% 81%;
+  }
 }

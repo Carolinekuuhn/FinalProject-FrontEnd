@@ -67,17 +67,21 @@ function CharityGroups() {
                   alt="CharityLogo"
                 />
                 <Card.Body>
-                  <Card.Title>{charityOne.name}</Card.Title>
+                  <Card.Title className="titlecard">{charityOne.name}</Card.Title>
+                  
                   <Card.Text>{charityOne.description}</Card.Text>
-                  <Link to={`/charities/${charityOne._id}`} className="nav-link">
-                    <Button className="submitBtn">See More Information</Button>
+                
+                </Card.Body> 
+                 <Link to={`/charities/${charityOne._id}`} className="nav-link">
+                    <Button className="submitBtn" id="urgentcard">See More Information</Button>
                   </Link>
-                </Card.Body>
               </Card>
             </div>
           ))}
         </div>
       </div>
+      <hr></hr>
+      <hr></hr>
       <br></br>
       <br></br>
       <h2 className="title">Find More Charities</h2>
@@ -103,7 +107,7 @@ function CharityGroups() {
           Families & Children
         </button>
       </div>{" "}
-      <hr></hr>
+      
       <hr size="10" />
       <div>
         <br></br>
@@ -114,12 +118,13 @@ function CharityGroups() {
             <Card className="card2" style={{ width: "18rem" }}>
               <Card.Img variant="top" src={charity.image} alt="CharityLogo" />
               <Card.Body>
-                <Card.Title> {charity.name} </Card.Title>
+                <Card.Title class="titlecard" > {charity.name} </Card.Title>
                 <Card.Text>{charity.description}</Card.Text>
-                <Link to={`/charities/${charity._id}`}>
-                  <Button variant="outline-dark">See More Information</Button>
-                </Link>
+                
               </Card.Body>
+              <Link className="nav-link" to={`/charities/${charity._id}`}>
+                  <Button  className="submitBtn" id="urgentcard" variant="outline-dark">See More Information</Button>
+                </Link>
             </Card>
           </div>
         ))}
