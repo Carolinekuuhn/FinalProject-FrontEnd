@@ -314,19 +314,26 @@ body {
   justify-content: space-between;
   align-items: center;
   border: 10px 20px;
-  margin: auto;
+  
 }
+
+.btnProfile > button{
+margin-right: 10px;
+margin-top: 0%;
+}
+
 .reviews {
   background-color: white;
   width: 400px;
   height: 300px;
   border-radius: 8px;
   padding: 20px 40px;
-  box-shadow: 0 10px 25px var(--color);
+  box-shadow: 0 10px 25px #b4cfea;
   text-align: center;
 }
 .reviews p {
   border: 1px solid #b4cfea;
+  padding: 5px;
 }
 
 .profile2 {
