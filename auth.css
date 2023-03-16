@@ -25,6 +25,11 @@
     font-size: 3em;
   }
 }
+
+#carousel {
+  opacity: 90%;
+}
+
 /* Footer Styling */
 
 footer {
@@ -89,15 +94,15 @@ footer i {
   flex-direction: row;
   display: flex;
   justify-content: space-around;
-  margin-top: 90vh;
+  margin-top: 100vh;
   margin: 3vh 5vh;
 }
 
- p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    text-align: start;
-  }
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: start;
+}
 
 body {
   background-color: #f1f3f5;
@@ -106,12 +111,24 @@ body {
 /* signup/login */
 
 .signupFrm {
+  padding-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   box-sizing: border-box;
   overflow-x: hidden;
+}
+
+.signupFrm2 {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0%;
 }
 
 #label {
@@ -127,13 +144,28 @@ body {
   /* rgba(92, 99, 105, .2); */
 }
 
+.form2 {
+  background-color: white;
+  width: 400px;
+  border-radius: 8px;
+  padding: 10px 20px;
+  box-shadow: 0 10px 25px var(--color);
+}
+
 .title {
   font-size: 50px;
   margin-bottom: 50px;
   color: #b4cfea;
 }
 
-.titleName{
+.titlefrm {
+  font-size: 40px;
+  color: #b4cfea;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.titleName {
   font-size: 25px;
   text-align: center;
   color: #bad7f5;
@@ -147,7 +179,7 @@ body {
   text-align: center;
 }
 
-.titleCard{
+.titleCard {
   font-size: 30px;
   margin-bottom: 30px;
   color: #3f92e6;
@@ -155,21 +187,20 @@ body {
   text-align: center;
 }
 
-.titleCard2{
-  border-radius: 2px solid ;
+.titleCard2 {
+  border-radius: 2px solid;
   font-size: 30px;
   margin-bottom: 30px;
   color: #333;
   text-align: center;
 }
 
-.titleNav{
+.titleNav {
   font-size: 30px;
   text-align: center;
   color: #7eb7f0;
   text-shadow: #9ebedf;
 }
-
 
 .inputContainer {
   position: relative;
@@ -224,9 +255,10 @@ body {
   cursor: pointer;
   font-size: 16px;
   margin-top: 30px;
+  text-align: center;
 }
 
-.logoutBtn{
+.logoutBtn {
   background-color: #b4cfea;
   color: white;
   border-radius: 6px;
@@ -274,16 +306,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }
-.btnProfile{
+.btnProfile {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   border: 10px 20px;
- margin: auto;
+  margin: auto;
 }
 .reviews {
   background-color: white;
@@ -302,7 +333,6 @@ body {
   padding-top: 30px;
   display: flex;
   justify-content: space-evenly;
-  
 }
 /*signups */
 
@@ -315,8 +345,6 @@ body {
   background-position: center;
 }
 
-
-
 /* signup charity background */
 .page2 {
   background-image: url("/images/pexels-julia-m-cameron-6995015.jpg");
@@ -324,6 +352,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  height: 105vh;
 }
 
 /* login background */
@@ -338,27 +367,48 @@ body {
 /* home page */
 
 .description {
-  background-color: rgb(255, 255, 255);
-  border-radius: 9px;
   text-align: center;
+  color: black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 9px;
+  justify-content: center;
   padding: 20px 40px;
   box-shadow: 0 20px 30px #33333394;
-  display: flex;
-  align-items: center;
+
   margin-top: 30px;
   margin-bottom: 30px;
+  background-color: rgb(255, 255, 255);
 }
 
+/*
 .description p {
   display: flex;
   align-items: center;
   text-align: justify;
-}
+} 
+#description {
+  text-align: center;
+  color: black;
+  font-family: "Red Hat Text", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  background-color: white;
+}*/
 
 .Card {
   box-shadow: 0 20px 30px var(--color);
-  
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  word-spacing: -0.08em;
 }
+
+
 
 .submitBtnHome {
   display: flex;
@@ -383,10 +433,12 @@ body {
   flex-direction: row;
 }
 
-.dropdwons{
-  display: inline-block;
+.dropdwons {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 60px;
+  margin-left: 30px;
 }
 
 @media (max-width: 767px) {

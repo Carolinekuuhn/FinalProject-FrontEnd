@@ -68,10 +68,10 @@ function SignupCharity() {
   const navigate = useNavigate();
 
   return (
-    <div className="page2">
-    <section className="signupFrm">
-      <form onSubmit={handleSubmit} className="form">
-        <h3 className="title">Signup Charity</h3>
+    <section className="page2">
+    <div className="signupFrm2">
+      <form onSubmit={handleSubmit} className="form2">
+        <h3 className="titlefrm">Signup Charity</h3>
 
         <div className="inputContainer">
           <label htmlFor="name" className="label">
@@ -171,8 +171,8 @@ function SignupCharity() {
   <div className="dropdwons">
         <div className="inputContainer">
           <div className="col-md-3">
-            <label htmlFor="typeofCharity" className="typeofCharity">
-              Type of Charity:
+            <label htmlFor="typeofCharity" className="typeofCharity"> 
+               Type of Charity: 
             </label>
             <select
               name="typeofCharity"
@@ -195,7 +195,7 @@ function SignupCharity() {
         <div className="inputContainer">
           <div className="col-md-3">
             <label htmlFor="urgencyNumber" className="urgencyNumber" id="label">
-              Urgency
+              Urgency Type:
             </label>
             <select
               name="urgencyNumber"
@@ -226,8 +226,8 @@ function SignupCharity() {
           Login
         </Link>
       </form>
-    </section>
     </div>
+    </section>
   );
 }
 
