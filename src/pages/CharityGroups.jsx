@@ -103,12 +103,15 @@ function CharityGroups() {
           Families & Children
         </button>
       </div>{" "}
+      <hr></hr>
+      <hr size="10"/>
       <div>
         <br></br>
+        
         <br></br>
         {filteredCharities.map((charity) => (
           <div key={charity._id} className="card-container-area2">
-            <Card className="card1" style={{ width: "18rem" }}>
+            <Card className="card2" style={{ width: "18rem" }}>
               <Card.Img variant="top" src={charity.image} alt="CharityLogo" />
               <Card.Body>
                 <Card.Title> {charity.name} </Card.Title>

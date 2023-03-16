@@ -16,8 +16,10 @@ body {
   max-width: 100%;
   margin: 0;
   padding: 10px;
-  box-shadow: 0 10px 25px var(--color);
-  background-color: rgb(228, 180, 185);
+  padding: 10px;
+  
+ 
+  
 }
 
 .card-container-area2 {
@@ -29,7 +31,7 @@ body {
   max-width: 100%;
   margin: 0;
   padding: 10px;
-  box-shadow: 0 10px 25px var(--color);
+  
   
 }
 
@@ -44,8 +46,22 @@ body {
   justify-content: center; /* horizontally center the content */
   align-items: center; /* vertically center the content */
   text-align: center; /* center the text within the content */
+  box-shadow: 0 30px 30px rgba(150, 3, 3, 0.16), 0 30px 20px rgba(155, 3, 3, 0.23);
+ 
 }
  
+
+.card2 {
+
+  margin: 10px;
+  background-color: #e9f1e0; 
+  height: 650px;
+  box-shadow: 0 10px 25px var(--color);
+  display: flex; /* make the card a flex container */
+  justify-content: center; /* horizontally center the content */
+  align-items: center; /* vertically center the content */
+  text-align: center; /* center the text within the content */
+}
 
 .card1 img {
   height: 200px;
@@ -68,6 +84,31 @@ body {
 }
 
 .card1 .btn {
+  margin-top: auto;
+}
+
+
+.card2 img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card2 .card-body {
+  flex: 1;
+}
+
+.card2 h5 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.card2 p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.card2 .btn {
   margin-top: auto;
 }
 
