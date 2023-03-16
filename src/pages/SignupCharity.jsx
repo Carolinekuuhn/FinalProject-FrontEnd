@@ -181,7 +181,7 @@ function SignupCharity() {
               className="form-select is-invalid"
               id="validationServer05"
               aria-describedby="validationServer04Feedback"
-              required
+             
             >
               <option value="">Choose...</option>
               <option value="Animals">Animals</option>
@@ -204,7 +204,7 @@ function SignupCharity() {
               className="form-select is-invalid"
               id="validationServer04"
               aria-describedby="validationServer04Feedback"
-              required
+            
             >
               <option value="" className="submitBtn">
                 Choose...

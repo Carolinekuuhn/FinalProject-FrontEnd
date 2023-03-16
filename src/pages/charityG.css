@@ -101,6 +101,7 @@ body {
   justify-content: center; /* horizontally center the content */
   align-items: center; /* vertically center the content */
   text-align: center; /* center the text within the content */
+  border-radius: 2%;
   
 }
 
