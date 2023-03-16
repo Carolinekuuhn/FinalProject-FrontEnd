@@ -470,3 +470,11 @@ height: 730px;
   justify-content: center;
 }
 
+.nav{
+ 
+  height: 95px;
+}
+
+.footer{
+  list-style: none;
+}

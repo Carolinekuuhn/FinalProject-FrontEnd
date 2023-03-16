@@ -222,10 +222,12 @@ function Home() {
             <li>(+351) 969-123-456</li>
             <li>info@volunteering.com</li>
           </ul>
-          <li>
+          <ul>
+          <li id="footer">
             Developed by <strong>Caroline Kuhn</strong> &{" "}
             <strong>Vanessa Vieira</strong>
           </li>
+          </ul>
         </div>
       </footer>
     </div>

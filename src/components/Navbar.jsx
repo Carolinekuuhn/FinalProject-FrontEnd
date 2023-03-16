@@ -35,7 +35,7 @@ function NavBar() {
 
   return (
     <div>
-      <Navbar bg="light" variant="light">
+      <Navbar bg="light" variant="light" className="nav">
         <Container>
           <Navbar.Brand href="/">Home</Navbar.Brand>
           <Nav className="me-auto">
