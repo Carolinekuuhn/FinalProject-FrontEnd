@@ -203,7 +203,6 @@ body {
   text-shadow: #9ebedf;
 }
 
-
 .inputContainer {
   position: relative;
   height: 45px;
@@ -316,12 +315,11 @@ body {
   justify-content: space-between;
   align-items: center;
   border: 10px 20px;
-  
 }
 
-.btnProfile > button{
-margin-right: 10px;
-margin-top: 0%;
+.btnProfile > button {
+  margin-right: 10px;
+  margin-top: 0%;
 }
 
 .reviews {
@@ -332,17 +330,15 @@ margin-top: 0%;
   padding: 20px 40px;
   box-shadow: 0 10px 25px #79acc3;
   text-align: center;
-  
 }
 .reviews p {
   border: 1px solid #79acc3;
   padding: 5px;
 }
 
-.reviewsgroup{
+.reviewsgroup {
   border: 1px solid #79acc3;
   padding: 10px;
-
 }
 
 .profile2 {
@@ -399,23 +395,6 @@ margin-top: 0%;
   background-color: rgb(255, 255, 255);
 }
 
-/*
-.description p {
-  display: flex;
-  align-items: center;
-  text-align: justify;
-} 
-#description {
-  text-align: center;
-  color: black;
-  font-family: "Red Hat Text", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  background-color: white;
-}*/
-
 .Card {
   box-shadow: 0 20px 30px var(--color);
   text-align: justify;
@@ -436,11 +415,9 @@ margin-top: 0%;
   border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
-
 }
 
-
-#submitBtnHome{
+#submitBtnHome {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -452,9 +429,7 @@ margin-top: 0%;
   border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
-
 }
-
 
 /*signup dropdwons*/
 
@@ -480,12 +455,10 @@ margin-top: 0%;
   }
 }
 
-
 /*card size */
 
 .cardtotal {
-height: 730px;
-
+  height: 730px;
 }
 
 #urgentcard {
@@ -494,11 +467,10 @@ height: 730px;
   justify-content: center;
 }
 
-.nav{
- 
+.nav {
   height: 95px;
 }
 
-.footer{
+.footer {
   list-style: none;
 }
