@@ -29,8 +29,9 @@ const CreateReview = (props) => {
   return (
   
     <form onSubmit={handleSubmit}>
+
       <div className="createReview">
-      <div >
+    {/*  <div >
         <label htmlFor="rating"> Rating:</label>
         <input
           type="number"
@@ -38,7 +39,7 @@ const CreateReview = (props) => {
           value={rating}
           onChange={(event) => setRating(event.target.value)}
         />
-      </div>
+      </div>*/}
       <br></br>
       <div>
         <label htmlFor="comment">Comment:</label>

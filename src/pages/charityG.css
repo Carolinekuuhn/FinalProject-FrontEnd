@@ -34,8 +34,8 @@ body {
   align-items: center; /* vertically center the content */
   text-align: center; /* center the text within the content */
   border-radius: 2%;
-  box-shadow: 0 30px 30px rgba(150, 3, 3, 0.16),
-    0 30px 20px rgba(155, 3, 3, 0.23);
+  box-shadow: 0 30px 30px #35485e,
+    0 20px 20px #63758a;
 }
 
 .card1 img {
@@ -85,6 +85,10 @@ body {
   margin: 0;
   padding: 10px;
   position: relative;
+  text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    word-spacing: -0.05em;
 }
 
 .card2 {
@@ -166,9 +170,9 @@ h1 {
 }
 
 .button1:hover {
-  background-color: #0069d9;
+  background-color: #a3cbf3;
   color: #fff;
-  border-color: #0062cc;
+  border-color: #a3cbf3;
 }
 
 .button1:focus {
@@ -187,6 +191,13 @@ h1 {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.titleGC {
+  font-size: 50px;
+  margin-bottom: 50px;
+  color:  #1a3858;
+  text-align: center;
 }
 
 /*Charity details stars here */
