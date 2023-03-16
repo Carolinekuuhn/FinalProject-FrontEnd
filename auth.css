@@ -89,7 +89,7 @@ footer i {
   flex-direction: row;
   display: flex;
   justify-content: space-around;
-  margin-top: 70vh;
+  margin-top: 90vh;
   margin: 3vh 5vh;
 }
 /* p {
@@ -97,7 +97,6 @@ footer i {
     margin-bottom: 1rem;
     text-align: justify;
   }*/
-  
 
 body {
   background-color: #f1f3f5;
@@ -133,9 +132,24 @@ body {
   color: #b4cfea;
 }
 
-.titleHome{
+.titleHome {
   font-size: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  color: #7eb7f0;
+  text-shadow: #9ebedf;
+  text-align: center;
+}
+
+.titleCard{
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #7eb7f0;
+  text-shadow: #9ebedf;
+}
+
+.titleNav{
+  font-size: 30px;
+  text-align: center;
   color: #7eb7f0;
   text-shadow: #9ebedf;
 }
@@ -194,7 +208,6 @@ body {
   cursor: pointer;
   font-size: 16px;
   margin-top: 30px;
-
 }
 
 .submitBtn:hover {
@@ -285,6 +298,7 @@ body {
 /* home page */
 
 .description {
+  background-color: white;
   border-radius: 9px;
   text-align: center;
   padding: 20px 40px;
@@ -292,10 +306,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: #b4cfea solid 1px;
   margin-top: 30px;
   margin-bottom: 30px;
- 
+}
+
+.Card {
+  box-shadow: 0 20px 30px var(--color);
+  
+}
+
+.submitBtnHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  padding: 15px 30px;
+  border: none;
+  background-color: #a3cbf3;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 30px;
 }
 
 /*signup dropdwons*/
@@ -305,7 +338,8 @@ body {
   flex-direction: row;
 }
 
-@media (max-width: 767px) { /* Adjust this breakpoint as needed */
+@media (max-width: 767px) {
+  /* Adjust this breakpoint as needed */
   .inputContainer {
     display: block;
     margin-right: 0;

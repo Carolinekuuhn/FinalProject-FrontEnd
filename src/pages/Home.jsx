@@ -78,7 +78,7 @@ function Home() {
           <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src="/images/Animal Card.jpg" />
             <Card.Body>
-              <Card.Title> Animals </Card.Title>
+              <Card.Title className="titleCard"> Animals </Card.Title>
               <Card.Text>
                 Animal charities are organizations that work towards the welfare
                 of animals. These charities are dedicated to rescuing,
@@ -87,17 +87,18 @@ function Home() {
                 animals in need.
               </Card.Text>
               <Link className="nav-link" to={"/signup"}>
-                <Button className="submitBtn"> Check Charities</Button>
+                <Button className="submitBtnHome"> Check Charities</Button>
               </Link>
             </Card.Body>
           </Card>
         </div>
 
         <div>
+
           <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src="/images/ambiente card.jpg" />
             <Card.Body>
-              <Card.Title> Environment </Card.Title>
+              <Card.Title className="titleCard"> Environment </Card.Title>
               <Card.Text>
                 Environmental charities focus on preserving and protecting the
                 natural world, including air, water, land, and wildlife. These
@@ -106,7 +107,7 @@ function Home() {
                 restoration efforts.
               </Card.Text>
               <Link className="nav-link" to={"/signup"}>
-                <Button className="submitBtn"> Check Charities</Button>
+                <Button className="submitBtnHome"> Check Charities</Button>
               </Link>
             </Card.Body>
           </Card>
@@ -116,18 +117,14 @@ function Home() {
           <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src="/images/Idosos card.jpg" />
             <Card.Body>
-              <Card.Title> Homeless </Card.Title>
+              <Card.Title className="titleCard"> Homeless </Card.Title>
               <Card.Text>
                 Homeless charities work towards addressing homelessness and
-                providing support to those who are homeless or at risk of
-                homelessness. These charities may provide shelter, food, and
-                clothing to homeless individuals, as well as assistance with job
-                training, education, and healthcare. Homeless charities may also
-                provide outreach services to connect homeless individuals with
-                resources and services in their community.
+                providing support to those who are homeless or at risk of homelessness.These charities may provide shelter, food, and
+                clothing, as well as assistance with job, education, and healthcare. They may also provide outreach services to connect homeless with resources in their community.
               </Card.Text>
               <Link className="nav-link" to={"/signup"}>
-                <Button className="submitBtn"> Check Charities</Button>
+                <Button className="submitBtnHome"> Check Charities </Button>
               </Link>
             </Card.Body>
           </Card>
@@ -137,8 +134,8 @@ function Home() {
           <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src="/images/card.jpg" />
             <Card.Body>
-              <Card.Title> Families & Children </Card.Title>
-              <Card.Text>
+              <Card.Title className="titleCard"> Families & Children </Card.Title>
+              <Card.Text className="textCard">
                 Family and children's charities are organizations that provide
                 support, assistance, and resources to families and children in
                 need. These charities may focus on a variety of issues,
@@ -147,7 +144,7 @@ function Home() {
                 with basic needs such as food, clothing, and shelter.
               </Card.Text>
               <Link className="nav-link" to={"/signup"}>
-                <Button className="submitBtn"> Check Charities</Button>
+                <Button className="submitBtnHome"> Check Charities </Button>
               </Link>
             </Card.Body>
           </Card>

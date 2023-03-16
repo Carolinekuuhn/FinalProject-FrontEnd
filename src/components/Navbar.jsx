@@ -64,7 +64,7 @@ function NavBar() {
               </>
             )}
           </Nav>
-          <div>Caring Cumminities</div>
+          <div className="titleNav"> Caring Communities </div>
         </Container>
         
       </Navbar>
