@@ -416,14 +416,13 @@ body {
   align-items: center;
   text-align: center;
   margin: auto;
-  padding: 15px 30px;
   border: none;
   background-color: #a3cbf3;
   color: white;
   border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 30px;
+
 }
 
 /*signup dropdwons*/
@@ -449,3 +448,18 @@ body {
     margin-bottom: 10px; /* Adjust this value as needed */
   }
 }
+
+
+/*card size */
+
+.cardtotal {
+height: 730px;
+
+}
+
+#urgentcard {
+  bottom: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+

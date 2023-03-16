@@ -91,14 +91,15 @@ function Home() {
         <div className="textDescription">
           <p>
             <br />
-            Welcome to our charity website, where you can make a difference and
-            help those in need. We offer a variety of charitable options to
-            choose from, so you can find the cause that speaks to your heart.
-            Our mission is to create a world where everyone has access to basic
-            necessities, equal opportunities, and a better quality of life. We
-            believe that every act of kindness and generosity can make a
-            significant impact, and that's why we offer various ways for you to
-            contribute, including donations or volunteering. <br />
+            Welcome to our Caring Communities website, where you can make a
+            difference and help those in need. We offer a variety of charitable
+            options to choose from, so you can find the cause that speaks to
+            your heart. Our mission is to create a world where everyone has
+            access to basic necessities, equal opportunities, and a better
+            quality of life. We believe that every act of kindness and
+            generosity can make a significant impact, and that's why we offer
+            various ways for you to contribute, including donations or
+            volunteering. <br />
             <br /> Whether you want to donate money to support a particular
             project, give your time to help with a local initiative. We are
             grateful for your interest in helping the community, and we hope
@@ -111,7 +112,7 @@ function Home() {
 
       <section className="Card-section">
         <div className="Card">
-          <Card style={{ width: "18rem"}}>
+          <Card className="cardtotal" style={{ width: "18rem" }}>
             <Card.Img variant="top" src="/images/Animal Card.jpg" />
             <Card.Body>
               <Card.Title className="titleCard"> Animals </Card.Title>
@@ -126,15 +127,18 @@ function Home() {
                 These organizations play a vital role in protecting and
                 promoting the rights of animals.
               </Card.Text>
-              <Link className="nav-link" to={"/signup"}>
-                <Button className="submitBtnHome"> See all Charities </Button>
-              </Link>
             </Card.Body>
+            <Link className="nav-link" to={"/signup"}>
+              <Button id="urgentcard" className="submitBtnHome">
+                {" "}
+                See all Charities{" "}
+              </Button>
+            </Link>
           </Card>
         </div>
 
         <div>
-          <Card style={{ width: "18rem" }}>
+          <Card className="cardtotal" style={{ width: "18rem" }}>
             <Card.Img variant="top" src="/images/ambiente card.jpg" />
             <Card.Body>
               <Card.Title className="titleCard"> Environment </Card.Title>
@@ -149,15 +153,18 @@ function Home() {
                 research and education to promote long-term sustainability and
                 the preservation of the environment.
               </Card.Text>
-              <Link className="nav-link" to={"/signup"}>
-                <Button className="submitBtnHome"> See all Charities </Button>
-              </Link>
-            </Card.Body>
+            </Card.Body>{" "}
+            <Link className="nav-link" to={"/signup"}>
+              <Button id="urgentcard" className="submitBtnHome">
+                {" "}
+                See all Charities{" "}
+              </Button>
+            </Link>
           </Card>
         </div>
 
         <div>
-          <Card style={{ width: "18rem" }}>
+          <Card className="cardtotal" style={{ width: "18rem" }}>
             <Card.Img variant="top" src="/images/Idosos card.jpg" />
             <Card.Body>
               <Card.Title className="titleCard"> Homeless </Card.Title>
@@ -172,15 +179,15 @@ function Home() {
                 individuals experiencing homelessness transition to stable
                 housing and a better quality of life.
               </Card.Text>
-              <Link className="nav-link" to={"/signup"}>
-                <Button className="submitBtnHome"> See all Charities </Button>
-              </Link>
             </Card.Body>
+            <Link className="nav-link" to={"/signup"}>
+              <Button id="urgentcard" className="submitBtnHome"> See all Charities </Button>
+            </Link>
           </Card>
         </div>
 
         <div>
-          <Card style={{ width: "18rem" }}>
+          <Card className="cardtotal" style={{ width: "18rem" }}>
             <Card.Img variant="top" src="/images/card.jpg" />
             <Card.Body>
               <Card.Title className="titleCard">Families & Children</Card.Title>
@@ -190,14 +197,14 @@ function Home() {
                 focus on a variety of issues, including child welfare, adoption,
                 foster care, parenting support, and family counseling. They also
                 provide assistance with basic needs such as food, clothing, and
-                shelter. These charities play a crucial role in
-                helping families overcome difficult circumstances, providing
-                them with the resources and support they need.
+                shelter. These charities play a crucial role in helping families
+                overcome difficult circumstances, providing them with the
+                resources and support they need.
               </Card.Text>
-              <Link className="nav-link" to={"/signup"}>
-                <Button className="submitBtnHome"> See all Charities </Button>
-              </Link>
             </Card.Body>
+            <Link className="nav-link" to={"/signup"}>
+              <Button id="urgentcard" className="submitBtnHome"> See all Charities </Button>
+            </Link>
           </Card>
         </div>
       </section>
