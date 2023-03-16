@@ -38,7 +38,7 @@ function Home() {
             alt="Third slide"
           />
           <Carousel.Caption>
-            <h3 id="title-header">  </h3>
+            <h3 id="title-header"> </h3>
           </Carousel.Caption>
         </Carousel.Item>
 
@@ -49,14 +49,16 @@ function Home() {
             alt="Third slide"
           />
           <Carousel.Caption>
-            <h3 id="title-header">  </h3>
+            <h3 id="title-header"> </h3>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
 
       <Container className="description">
+        <img src="/images/logo2-removebg-preview.png" className="imgHome" style={{ width: "10rem" }} />
+        <div className="textDescription">
         <p>
-          <h1 className="titleHome"> Caring Communities</h1>
+        <br/>
           Welcome to our charity website, where you can make a difference and
           help those in need. We offer a variety of charitable options to choose
           from, so you can find the cause that speaks to your heart. Our mission
@@ -64,13 +66,14 @@ function Home() {
           equal opportunities, and a better quality of life. We believe that
           every act of kindness and generosity can make a significant impact,
           and that's why we offer various ways for you to contribute, including
-          donations or volunteering. Whether you want to donate money to support
-          a particular project, give your time to help with a local initiative.
+          donations or volunteering. <br/><br/> Whether you want to donate money to support
+          a particular project, give your time to help with a local initiative. 
           We are grateful for your interest in helping the community, and we
           hope that you'll find an opportunity to get involved and make a
           positive impact on the lives of those who need it most. Together, we
           can build a brighter future for everyone.
         </p>
+        </div>
       </Container>
 
       <section className="Card-section">
@@ -87,14 +90,13 @@ function Home() {
                 animals in need.
               </Card.Text>
               <Link className="nav-link" to={"/signup"}>
-                <Button className="submitBtnHome"> Check Charities</Button>
+                <Button className="submitBtnHome"> See all Charities </Button>
               </Link>
             </Card.Body>
           </Card>
         </div>
 
         <div>
-
           <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src="/images/ambiente card.jpg" />
             <Card.Body>
@@ -107,7 +109,7 @@ function Home() {
                 restoration efforts.
               </Card.Text>
               <Link className="nav-link" to={"/signup"}>
-                <Button className="submitBtnHome"> Check Charities</Button>
+                <Button className="submitBtnHome"> See all Charities </Button>
               </Link>
             </Card.Body>
           </Card>
@@ -120,11 +122,14 @@ function Home() {
               <Card.Title className="titleCard"> Homeless </Card.Title>
               <Card.Text>
                 Homeless charities work towards addressing homelessness and
-                providing support to those who are homeless or at risk of homelessness.These charities may provide shelter, food, and
-                clothing, as well as assistance with job, education, and healthcare. They may also provide outreach services to connect homeless with resources in their community.
+                providing support to those who are homeless or at risk of
+                homelessness.These charities may provide shelter, food, and
+                clothing, as well as assistance with job, education, and
+                healthcare. They may also provide outreach services to connect
+                homeless with resources in their community.
               </Card.Text>
               <Link className="nav-link" to={"/signup"}>
-                <Button className="submitBtnHome"> Check Charities </Button>
+                <Button className="submitBtnHome"> See all Charities </Button>
               </Link>
             </Card.Body>
           </Card>
@@ -134,7 +139,10 @@ function Home() {
           <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src="/images/card.jpg" />
             <Card.Body>
-              <Card.Title className="titleCard"> Families & Children </Card.Title>
+              <Card.Title className="titleCard">
+                {" "}
+                Families & Children{" "}
+              </Card.Title>
               <Card.Text className="textCard">
                 Family and children's charities are organizations that provide
                 support, assistance, and resources to families and children in
@@ -144,7 +152,7 @@ function Home() {
                 with basic needs such as food, clothing, and shelter.
               </Card.Text>
               <Link className="nav-link" to={"/signup"}>
-                <Button className="submitBtnHome"> Check Charities </Button>
+                <Button className="submitBtnHome"> See all Charities </Button>
               </Link>
             </Card.Body>
           </Card>

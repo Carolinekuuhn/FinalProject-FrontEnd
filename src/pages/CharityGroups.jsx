@@ -51,12 +51,12 @@ function CharityGroups() {
   }
 
   return (
-    <div>
-      <h1>All Charities</h1>
+    <section>
+      <h1 className="title"> Charity with urgency</h1>
       <br></br>
       <br></br>
       <div className="cardtotal">
-        <h2>URGENT</h2>
+      
         <div className="card-container-area">
           {filteredCharity.map((charityOne) => (
             <div key={charityOne._id} className="card-container-area">
@@ -69,8 +69,8 @@ function CharityGroups() {
                 <Card.Body>
                   <Card.Title>{charityOne.name}</Card.Title>
                   <Card.Text>{charityOne.description}</Card.Text>
-                  <Link to={`/charities/${charityOne._id}`}>
-                    <Button variant="outline-dark">See More Information</Button>
+                  <Link to={`/charities/${charityOne._id}`} className="nav-link">
+                    <Button className="submitBtn">See More Information</Button>
                   </Link>
                 </Card.Body>
               </Card>
@@ -80,7 +80,7 @@ function CharityGroups() {
       </div>
       <br></br>
       <br></br>
-      <h2>Find More Charities</h2>
+      <h2 className="title">Find More Charities</h2>
       <br></br>
       <br></br>
       <div className="button-container">
@@ -104,10 +104,10 @@ function CharityGroups() {
         </button>
       </div>{" "}
       <hr></hr>
-      <hr size="10"/>
+      <hr size="10" />
       <div>
         <br></br>
-        
+
         <br></br>
         {filteredCharities.map((charity) => (
           <div key={charity._id} className="card-container-area2">
@@ -124,7 +124,7 @@ function CharityGroups() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

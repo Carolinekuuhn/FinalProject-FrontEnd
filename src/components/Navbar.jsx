@@ -41,18 +41,19 @@ function NavBar() {
           <Nav className="me-auto">
             {loggedIn ? (
               <>
+              
                 <span>
-                  <strong> Hello {user.name} </strong>
+                  <strong className="titleName"> Hello {user.name} </strong>
                 </span>
                 {isCharity ? (
                   <>
                     <Nav.Link href="/profile"> Charity Profile </Nav.Link>
-                    <button onClick={logout}>Logout</button>
+                    <button onClick={logout} className="logoutBtn">Logout</button>
                   </>
                 ) : (
                   <>
                     <Nav.Link href="/charities">Charity Groups</Nav.Link>
-                    <button onClick={logout}>Logout</button>
+                    <button onClick={logout} className="logoutBtn">Logout</button>
                   </>
                 )}
               </>
@@ -64,7 +65,9 @@ function NavBar() {
               </>
             )}
           </Nav>
-          <div className="titleNav"> Caring Communities </div>
+          <div>
+            <img src="/images/logo2-removebg-preview.png" alt="Logo" />
+          </div>
         </Container>
         
       </Navbar>

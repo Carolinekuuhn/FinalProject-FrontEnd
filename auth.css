@@ -92,11 +92,12 @@ footer i {
   margin-top: 90vh;
   margin: 3vh 5vh;
 }
-/* p {
+
+ p {
     font-size: 1rem;
     margin-bottom: 1rem;
-    text-align: justify;
-  }*/
+    text-align: start;
+  }
 
 body {
   background-color: #f1f3f5;
@@ -132,8 +133,14 @@ body {
   color: #b4cfea;
 }
 
+.titleName{
+  font-size: 25px;
+  text-align: center;
+  color: #bad7f5;
+}
+
 .titleHome {
-  font-size: 50px;
+  font-size: 20px;
   margin-bottom: 30px;
   color: #7eb7f0;
   text-shadow: #9ebedf;
@@ -143,8 +150,17 @@ body {
 .titleCard{
   font-size: 30px;
   margin-bottom: 30px;
-  color: #7eb7f0;
+  color: #3f92e6;
   text-shadow: #9ebedf;
+  text-align: center;
+}
+
+.titleCard2{
+  border-radius: 2px solid ;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
 }
 
 .titleNav{
@@ -210,6 +226,17 @@ body {
   margin-top: 30px;
 }
 
+.logoutBtn{
+  background-color: #b4cfea;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  text-align: center;
+  align-items: center;
+}
+
 .submitBtn:hover {
   background-color: #b4cfea;
   transform: translateY(-2px);
@@ -242,13 +269,22 @@ body {
   width: 500px;
   height: 600px;
   border-radius: 8px;
-  padding: 20px 40px;
+  padding: 20px 30px;
   box-shadow: 0 10px 25px var(--color);
   display: flex;
   justify-content: center;
   align-items: center;
+ 
 }
-
+.btnProfile{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 10px 20px;
+ margin: auto;
+}
 .reviews {
   background-color: white;
   width: 400px;
@@ -266,7 +302,9 @@ body {
   padding-top: 30px;
   display: flex;
   justify-content: space-evenly;
+  
 }
+/*signups */
 
 /* signup volunteer background */
 .page {
@@ -276,6 +314,8 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+
 
 /* signup charity background */
 .page2 {
@@ -298,16 +338,21 @@ body {
 /* home page */
 
 .description {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 9px;
   text-align: center;
   padding: 20px 40px;
-  box-shadow: 0 20px 30px var(--color);
+  box-shadow: 0 20px 30px #33333394;
   display: flex;
-  justify-content: center;
   align-items: center;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.description p {
+  display: flex;
+  align-items: center;
+  text-align: justify;
 }
 
 .Card {
@@ -336,6 +381,12 @@ body {
 .inputContainer {
   display: inline-block;
   flex-direction: row;
+}
+
+.dropdwons{
+  display: inline-block;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 @media (max-width: 767px) {

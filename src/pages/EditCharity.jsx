@@ -9,16 +9,17 @@ function EditCharity() {
   const [description, setDescription] = useState("");
   const [urgencyNumber, setUrgencyNumber] = useState("");
   const [image, setImage] = useState("");
+  const [isUpdated, setIsUpdated] = useState(false); // new state variable
 
   const handleName = (e) => setName(e.target.value);
   const handleDescription = (e) => setDescription(e.target.value);
   const handleUrgencyNumber = (e) => setUrgencyNumber(e.target.value);
-
   const navigate = useNavigate(); // store in variable so now we can use this function   (to redirect)
 
   const { user } = useContext(AuthContext);
   const [charity, setCharity] = useState(null);
   console.log("lalalal", user);
+
   const getCharity = async () => {
     try {
       const response = await axios.get(
@@ -77,6 +78,7 @@ function EditCharity() {
         `${import.meta.env.VITE_API_URL}/api/charity/${user._id}`,
         body
       );
+      setIsUpdated(true); // set isUpdated to true on successful update
       navigate(`/profile`);
     } catch (error) {
       console.log(error);
@@ -88,8 +90,14 @@ function EditCharity() {
       <div className="profile">
         <form onSubmit={handleSubmit}>
           <h1 className="title"> Edit Profile: </h1>
+          {isUpdated && ( // conditionally render message if isUpdated is true
+            <p className="titleCard2"> Successfully Updated !</p>
+          )}
+          <br />
+
           <div className="inputContainer">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name"> Name </label>
+            <br/>
             <input
               type="text"
               name="name"
@@ -98,7 +106,7 @@ function EditCharity() {
               onChange={handleName}
             />
           </div>
-
+          <br />
           <div className="inputContainer">
             <div className="col-md-3">
               <label
@@ -125,7 +133,8 @@ function EditCharity() {
               </select>
             </div>
           </div>
-
+          <br />
+          <br />
           <div className="inputContainer">
             <label htmlFor="description">Description</label>
             <input
@@ -137,7 +146,7 @@ function EditCharity() {
             />
           </div>
 
-          <div className="inputContainer">
+          {/*<div className="inputContainer">
             <div className="mb-3">
               <input
                 type="file"
@@ -147,16 +156,19 @@ function EditCharity() {
                 aria-label="file example"
               />
             </div>
+          </div> */}
+          <br />
+          <br />
+          <div className="btnProfile">
+            <button type="submit" className="submitBtn">
+              {" "}
+              Edit Profile{" "}
+            </button>
+            <button onClick={deleteCharity} className="submitBtn">
+              {" "}
+              Delete Account{" "}
+            </button>
           </div>
-
-          <button type="submit" className="submitBtn">
-            {" "}
-            Edit Profile{" "}
-          </button>
-          <button onClick={deleteCharity} className="submitBtn">
-            {" "}
-            Delete Account{" "}
-          </button>
         </form>
       </div>
 
@@ -164,7 +176,11 @@ function EditCharity() {
         <h1 className="title"> Reviews</h1>
         {charity &&
           charity.reviews.map((review) => {
-            return <p>{review.userId.name}: {review.userComment}</p>;
+            return (
+              <p>
+                {review.userId.name}: {review.userComment}
+              </p>
+            );
           })}
       </div>
     </section>
@@ -172,4 +188,3 @@ function EditCharity() {
 }
 
 export default EditCharity;
-

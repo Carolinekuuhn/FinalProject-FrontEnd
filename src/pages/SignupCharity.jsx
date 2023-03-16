@@ -166,6 +166,8 @@ function SignupCharity() {
             />
           </div>
         </div>
+
+
   <div className="dropdwons">
         <div className="inputContainer">
           <div className="col-md-3">
@@ -189,8 +191,7 @@ function SignupCharity() {
             </select>
           </div>
         </div>
-        <br></br>
-        <br></br>
+        
         <div className="inputContainer">
           <div className="col-md-3">
             <label htmlFor="urgencyNumber" className="urgencyNumber" id="label">
@@ -215,6 +216,7 @@ function SignupCharity() {
           </div>
         </div>
 </div>
+
         <button type="submit" className="submitBtn">
           Create account
         </button>
