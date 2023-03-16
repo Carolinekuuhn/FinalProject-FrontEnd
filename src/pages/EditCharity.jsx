@@ -37,7 +37,7 @@ function EditCharity() {
   const deleteCharity = async () => {
     try {
       await axios.delete(
-        `${import.meta.env.VITE_API_URL}/api/charities/${user._id}`
+        `${import.meta.env.VITE_API_URL}/api/charity/${user._id}`
       );
       navigate("/");
     } catch (error) {
@@ -72,7 +72,7 @@ function EditCharity() {
     e.preventDefault();
 
     // axios is syncronous, so we transfor the function into a async function
-    const body = { name, description };
+    const body = { name, description, urgencyNumber, image };
     try {
       await axios.put(
         `${import.meta.env.VITE_API_URL}/api/charity/${user._id}`,
