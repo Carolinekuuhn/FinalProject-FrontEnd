@@ -111,7 +111,7 @@ function Home() {
 
       <section className="Card-section">
         <div className="Card">
-          <Card style={{ width: "18rem"}}>
+          <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src="/images/Animal Card.jpg" />
             <Card.Body>
               <Card.Title className="titleCard"> Animals </Card.Title>
@@ -126,10 +126,13 @@ function Home() {
                 These organizations play a vital role in protecting and
                 promoting the rights of animals.
               </Card.Text>
-              <Link className="nav-link" to={"/signup"}>
-                <Button className="submitBtnHome"> See all Charities </Button>
-              </Link>
             </Card.Body>
+            <Link className="nav-link" to={"/signup"}>
+              <Button id="urgentcard" className="submitBtnHome">
+                {" "}
+                See all Charities{" "}
+              </Button>
+            </Link>
           </Card>
         </div>
 
@@ -149,10 +152,13 @@ function Home() {
                 research and education to promote long-term sustainability and
                 the preservation of the environment.
               </Card.Text>
-              <Link className="nav-link" to={"/signup"}>
-                <Button className="submitBtnHome"> See all Charities </Button>
-              </Link>
             </Card.Body>
+            <Link className="nav-link" to={"/signup"}>
+              <Button id="urgentcard" className="submitBtnHome">
+                {" "}
+                See all Charities{" "}
+              </Button>
+            </Link>
           </Card>
         </div>
 
@@ -172,10 +178,13 @@ function Home() {
                 individuals experiencing homelessness transition to stable
                 housing and a better quality of life.
               </Card.Text>
-              <Link className="nav-link" to={"/signup"}>
-                <Button className="submitBtnHome"> See all Charities </Button>
-              </Link>
             </Card.Body>
+            <Link className="nav-link" to={"/signup"}>
+              <Button id="urgentcard" className="submitBtnHome">
+                {" "}
+                See all Charities{" "}
+              </Button>
+            </Link>
           </Card>
         </div>
 
@@ -190,14 +199,17 @@ function Home() {
                 focus on a variety of issues, including child welfare, adoption,
                 foster care, parenting support, and family counseling. They also
                 provide assistance with basic needs such as food, clothing, and
-                shelter. These charities play a crucial role in
-                helping families overcome difficult circumstances, providing
-                them with the resources and support they need.
+                shelter. These charities play a crucial role in helping families
+                overcome difficult circumstances, providing them with the
+                resources and support they need.
               </Card.Text>
-              <Link className="nav-link" to={"/signup"}>
-                <Button className="submitBtnHome"> See all Charities </Button>
-              </Link>
             </Card.Body>
+            <Link className="nav-link" to={"/signup"}>
+              <Button id="urgentcard" className="submitBtnHome">
+                {" "}
+                See all Charities{" "}
+              </Button>
+            </Link>
           </Card>
         </div>
       </section>
@@ -210,6 +222,10 @@ function Home() {
             <li>(+351) 969-123-456</li>
             <li>info@volunteering.com</li>
           </ul>
+          <li>
+            Developed by <strong>Caroline Kuhn</strong> &{" "}
+            <strong>Vanessa Vieira</strong>
+          </li>
         </div>
       </footer>
     </div>
