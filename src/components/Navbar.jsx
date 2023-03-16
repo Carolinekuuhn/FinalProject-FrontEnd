@@ -64,7 +64,9 @@ function NavBar() {
               </>
             )}
           </Nav>
+          <div>Caring Cumminities</div>
         </Container>
+        
       </Navbar>
     </div>
   );

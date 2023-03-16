@@ -28,7 +28,7 @@ function Home() {
             alt="Second slide"
           />
           <Carousel.Caption>
-            <h3 id="title-header">Volunteer</h3>
+            <h3 id="title-header"> </h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -38,7 +38,7 @@ function Home() {
             alt="Third slide"
           />
           <Carousel.Caption>
-            <h3 id="title-header">Volunteer</h3>
+            <h3 id="title-header">  </h3>
           </Carousel.Caption>
         </Carousel.Item>
 
@@ -49,14 +49,14 @@ function Home() {
             alt="Third slide"
           />
           <Carousel.Caption>
-            <h3 id="title-header">Volunteer</h3>
+            <h3 id="title-header">  </h3>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
 
       <Container className="description">
         <p>
-          <h1 className="title"> Caring Communities</h1>
+          <h1 className="titleHome"> Caring Communities</h1>
           Welcome to our charity website, where you can make a difference and
           help those in need. We offer a variety of charitable options to choose
           from, so you can find the cause that speaks to your heart. Our mission
