@@ -97,7 +97,7 @@ function EditCharity() {
 
           <div className="inputContainer">
             <label htmlFor="name"> Name </label>
-            <br/>
+            <br />
             <input
               type="text"
               name="name"
@@ -123,6 +123,7 @@ function EditCharity() {
                 className="form-select is-invalid"
                 id="validationServer04"
                 aria-describedby="validationServer04Feedback"
+                style={{ borderColor: "black" }}
               >
                 <option value="" className="submitBtn">
                   Choose...
@@ -146,7 +147,7 @@ function EditCharity() {
             />
           </div>
 
-          {/*<div className="inputContainer">
+          <div className="inputContainer">
             <div className="mb-3">
               <input
                 type="file"
@@ -156,7 +157,7 @@ function EditCharity() {
                 aria-label="file example"
               />
             </div>
-          </div> */}
+          </div>
           <br />
           <br />
           <div className="btnProfile">

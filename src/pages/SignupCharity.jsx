@@ -69,53 +69,53 @@ function SignupCharity() {
 
   return (
     <section className="page2">
-    <div className="signupFrm2">
-      <form onSubmit={handleSubmit} className="form2">
-        <h3 className="titlefrm">Signup Charity</h3>
+      <div className="signupFrm2">
+        <form onSubmit={handleSubmit} className="form2">
+          <h3 className="titlefrm">Signup Charity</h3>
 
-        <div className="inputContainer">
-          <label htmlFor="name" className="label">
-            Name
-          </label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            value={name}
-            onChange={handleName}
-            className="input"
-          />
-        </div>
+          <div className="inputContainer">
+            <label htmlFor="name" className="label">
+              Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              value={name}
+              onChange={handleName}
+              className="input"
+            />
+          </div>
 
-        <div className="inputContainer">
-          <label htmlFor="email" className="label">
-            Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            value={email}
-            onChange={handleEmail}
-            className="input"
-          />
-        </div>
+          <div className="inputContainer">
+            <label htmlFor="email" className="label">
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value={email}
+              onChange={handleEmail}
+              className="input"
+            />
+          </div>
 
-        <div className="inputContainer">
-          <label htmlFor="password" className="label">
-            Password
-          </label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            value={password}
-            onChange={handlePassword}
-            className="input"
-          />
-        </div>
+          <div className="inputContainer">
+            <label htmlFor="password" className="label">
+              Password
+            </label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              value={password}
+              onChange={handlePassword}
+              className="input"
+            />
+          </div>
 
-        {/* <label htmlFor="UrgencyNumber">Urgency</label>
+          {/* <label htmlFor="UrgencyNumber">Urgency</label>
         <input
           type="number"
           name="number"
@@ -123,110 +123,116 @@ function SignupCharity() {
           value={number}
           onChange={handleNumber}
         /> */}
-       
 
-        <div className="inputContainer">
-          <label htmlFor="description" className="label">
-            Description
-          </label>
-          <input
-            type="text"
-            name="description"
-            id="description"
-            value={description}
-            onChange={handleDescription}
-            className="input"
-          />
-        </div>
-
-        <div className="inputContainer">
-          <label htmlFor="urlLink" className="label">
-            Website Link:
-          </label>
-          <input
-            type="text"
-            id="urlLink"
-            name="urlLink"
-            value={urlLink}
-            onChange={handleUrlLink}
-            placeholder="Enter website link here"
-            className="input"
-          />
-        </div>
-
-        <div className="inputContainer">
-          <div className="mb-3">
+          <div className="inputContainer">
+            <label htmlFor="description" className="label">
+              Description
+            </label>
             <input
-              type="file"
-              name="image"
-              onChange={handleFileUpload}
-              className="form-control"
-              aria-label="file example"
-              required
+              type="text"
+              name="description"
+              id="description"
+              value={description}
+              onChange={handleDescription}
+              className="input"
             />
           </div>
-        </div>
 
-
-  <div className="dropdwons">
-        <div className="inputContainer">
-          <div className="col-md-3">
-            <label htmlFor="typeofCharity" className="typeofCharity"> 
-               Type of Charity: 
+          <div className="inputContainer">
+            <label htmlFor="urlLink" className="label">
+              Website Link:
             </label>
-            <select
-              name="typeofCharity"
-              value={typeofCharity}
-              onChange={handleTypeofCharity}
-              className="form-select is-invalid"
-              id="validationServer05"
-              aria-describedby="validationServer04Feedback"
-             
-            >
-              <option value="">Choose...</option>
-              <option value="Animals">Animals</option>
-              <option value="Families & Children">Families & Children</option>
-              <option value="Homeless">Homeless</option>
-              <option value="Environment">Environment</option>
-            </select>
+            <input
+              type="text"
+              id="urlLink"
+              name="urlLink"
+              value={urlLink}
+              onChange={handleUrlLink}
+              placeholder="Enter website link here"
+              className="input"
+            />
           </div>
-        </div>
-        
-        <div className="inputContainer">
-          <div className="col-md-3">
-            <label htmlFor="urgencyNumber" className="urgencyNumber" id="label">
-              Urgency Type:
-            </label>
-            <select
-              name="urgencyNumber"
-              value={urgencyNumber}
-              onChange={handleUrgencyNumber}
-              className="form-select is-invalid"
-              id="validationServer04"
-              aria-describedby="validationServer04Feedback"
-            
-            >
-              <option value="" className="submitBtn">
-                Choose...
-              </option>
-              <option value="Not Urgent">1</option>
-              <option value="A bit Urgent">2</option>
-              <option value="Urgent">3</option>
-            </select>
+
+          <div className="inputContainer">
+            <div className="mb-3">
+              <input
+                type="file"
+                name="image"
+                onChange={handleFileUpload}
+                className="form-control"
+                aria-label="file example"
+                required
+              />
+            </div>
           </div>
-        </div>
-</div>
 
-        <button type="submit" className="submitBtn">
-          Create account
-        </button>
+          <div className="dropdwons">
+            <div className="inputContainer">
+              <div className="col-md-3">
+                <label htmlFor="typeofCharity" className="typeofCharity">
+                  Type of Charity:
+                </label>
+                <select
+                  name="typeofCharity"
+                  value={typeofCharity}
+                  onChange={handleTypeofCharity}
+                  className="form-select is-invalid"
+                  id="validationServer05"
+                  aria-describedby="validationServer04Feedback"
+                  style={{borderColor: "black"}}
+                >
+                  <option value="">Choose...</option>
+                  <option value="Animals">Animals</option>
+                  <option value="Families & Children">
+                    Families & Children
+                  </option>
+                  <option value="Homeless">Homeless</option>
+                  <option value="Environment">Environment</option>
+                </select>
+              </div>
+            </div>
 
-        <p>Already have an account?</p>
-        <Link to="/login" className="nav-link">
-          Login
-        </Link>
-      </form>
-    </div>
+            <div className="inputContainer">
+              <div className="col-md-3">
+                <label
+                  htmlFor="urgencyNumber"
+                  className="urgencyNumber"
+                  id="label"
+              
+                >
+                  Urgency Type:
+                </label>
+                <select
+                  name="urgencyNumber"
+                  value={urgencyNumber}
+                  onChange={handleUrgencyNumber}
+                  className="form-select is-invalid"
+                  id="validationServer04"
+                  aria-describedby="validationServer04Feedback"
+                  style={{borderColor: "black"}}
+                >
+                  <option value="" className="submitBtn">
+                    Choose...
+                  </option>
+                  <option value="Not Urgent">1</option>
+                  <option value="A bit Urgent">2</option>
+                  <option value="Urgent">3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" className="submitBtn">
+            Create account
+          </button>
+          <br />
+
+          <p>Already have an account?</p>
+          <Link to="/login" className="nav-link" id="submitBtnHome">
+            Login
+          </Link>
+        </form>
+      </div>
     </section>
   );
 }

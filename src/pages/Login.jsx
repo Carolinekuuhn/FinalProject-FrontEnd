@@ -83,7 +83,8 @@ function Login() {
         </button>
 
         <p>Don't have an account?</p>
-        <Link to="/signup" className="nav-link">
+        <Link to="/signup" className="nav-link" id="submitBtnHome"
+        >
           Signup
         </Link>
       </form>

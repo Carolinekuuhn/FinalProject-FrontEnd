@@ -72,10 +72,10 @@ function SignupUser() {
         </div>
 
         <button type="submit" className="submitBtn">Create account</button>
-      
+      <br />
 
       <p>Already have an account?</p>
-      <Link to="/login" className="nav-link">Login</Link>
+      <Link to="/login" className="nav-link" id="submitBtnHome">Login</Link>
       </form>
     </section>
     </div>

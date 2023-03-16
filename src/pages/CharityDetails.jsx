@@ -54,14 +54,18 @@ function CharityDetails() {
           <Card style={{ width: "40rem" }}>
             <Card.Img variant="top" src={charity.image} alt="CharityLogo" />
             <Card.Body>
-              <Card.Title> {charity.name} </Card.Title>
+              <Card.Title className="titleGC2"> {charity.name} </Card.Title>
+              <br />
               <Link
                 to={charity.urlLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{color: "#1a3858"}}
               >
                 {charity.urlLink}
               </Link>
+              <br />
+              <br />
               <Card.Text>{charity.description}</Card.Text>
             </Card.Body>
      

@@ -83,7 +83,7 @@ function CharityGroups() {
       
       <br></br>
       <br></br>
-      <h2 className="title">Find More Charities</h2>
+      <h2 className="titleGC">Find More Charities</h2>
       <br></br>
       <br></br>
       <div className="button-container">
