@@ -71,7 +71,7 @@ function SignupCharity() {
     <section className="page2">
       <div className="signupFrm2">
         <form onSubmit={handleSubmit} className="form2">
-          <h3 className="titlefrm">Signup Charity</h3>
+          <h3 className="titlefrm">Sign up Charity</h3>
 
           <div className="inputContainer">
             <label htmlFor="name" className="label">

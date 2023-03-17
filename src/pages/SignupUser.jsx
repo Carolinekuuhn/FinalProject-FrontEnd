@@ -32,7 +32,7 @@ function SignupUser() {
     <div className="page">
     <section className="signupFrm">
     <form onSubmit={handleSubmit} className="form">
-      <h2 className="title">Signup Volunteer</h2>
+      <h2 className="title">Sign up Volunteer</h2>
       
 
       <div className="inputContainer">
