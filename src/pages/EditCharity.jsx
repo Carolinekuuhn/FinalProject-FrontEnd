@@ -72,7 +72,7 @@ function EditCharity() {
     e.preventDefault();
 
     // axios is syncronous, so we transfor the function into a async function
-    const body = { name, description, urgencyNumber, image };
+    const body = { name, description, urgencyNumber };
     try {
       await axios.put(
         `${import.meta.env.VITE_API_URL}/api/charity/${user._id}`,
@@ -147,7 +147,7 @@ function EditCharity() {
             />
           </div>
 
-          <div className="inputContainer">
+         <div className="inputContainer">
             <div className="mb-3">
               <input
                 type="file"
