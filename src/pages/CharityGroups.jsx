@@ -52,7 +52,7 @@ function CharityGroups() {
 
   return (
     <section>
-      <h1 className="titleGC"> Need Help Urgently!</h1>
+      <h1 className="titleGC"> SOS: Urgent Help Required!</h1>
       <br></br>
       <br></br>
       <div className="cardtotal">
@@ -83,7 +83,7 @@ function CharityGroups() {
       
       <br></br>
       <br></br>
-      <h2 className="titleGC">Find More Charities</h2>
+      <h2 className="titleGC">Find More Charity Organizations</h2>
       <br></br>
       <br></br>
       <div className="button-container">

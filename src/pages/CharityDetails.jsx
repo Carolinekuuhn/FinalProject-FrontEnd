@@ -66,7 +66,7 @@ function CharityDetails() {
               </Link>
               <br />
               <br />
-              <Card.Text>{charity.description}</Card.Text>
+              <Card.Text className="adjustText">{charity.description}</Card.Text>
             </Card.Body>
      
             <CreateReview charityId={charity._id} setUpdated={setUpdated}/>
