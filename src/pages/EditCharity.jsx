@@ -72,7 +72,7 @@ function EditCharity() {
     e.preventDefault();
 
     // axios is syncronous, so we transfor the function into a async function
-    const body = { name, description, urgencyNumber };
+    const body = { name, description, urgencyNumber, image };
     try {
       await axios.put(
         `${import.meta.env.VITE_API_URL}/api/charity/${user._id}`,
